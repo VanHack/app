@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-settings',
-  templateUrl: 'settings.html'
+  selector: 'page-tm-setup',
+  templateUrl: 'tm-setup.html'
 })
-export class SettingsPage {
+export class TMSetupPage {
 
   constructor(public navCtrl: NavController) {
 

@@ -1,0 +1,29 @@
+page-tm-setup {
+
+	.content.content-ios, .content.content-android{
+		background: #eee;
+	}
+	h1{
+		font-family: $brandonBlack;
+		color: $redskip;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	span.welcome{
+		font-family: OpenSans;
+		font-size: 9px;
+		font-weight: bold;
+		line-height: 1.39;
+		text-align: center;
+		color: #4a4a4a;
+	}
+
+	.taste-frame{
+		height: calc(100vh - 15vh);
+		background: #fff;
+		border-radius: 10px;
+		margin: 10px;
+		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+	}
+
+}
