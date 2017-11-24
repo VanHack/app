@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler, Injectable, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { StatusBar     } from '@ionic-native/status-bar';
+import { HttpModule    } from '@angular/http';
 
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Pro          } from '@ionic/pro';
@@ -13,6 +14,7 @@ import { HomePage             } from '../pages/home/home';
 import { TabsPage             } from '../pages/tabs/tabs';
 import { TasteMeterComponent  } from '../pages/tasteMeter/TasteMeter.component';
 import { LoginComponent       } from '../pages/login/login.component';
+import { TasteService         } from '../taste.service';
 
 const IonicPro = Pro.init('fee2cdf8', {
   appVersion: "0.0.1"
@@ -51,6 +53,7 @@ export class SkipAppErrorHandler implements ErrorHandler {
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot( AppComponent )
   ],
   bootstrap: [IonicApp],
@@ -67,6 +70,7 @@ export class SkipAppErrorHandler implements ErrorHandler {
     StatusBar,
     SplashScreen,
     IonicErrorHandler,
+    TasteService,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
