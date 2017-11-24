@@ -14,3 +14,37 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+
+//VARIABLES
+$white: #ffffff;
+$redskip: #be2c2c;
+$green: #1fc52b;
+$brandonBlack:"BrandonGrotesque";
+
+@font-face {
+	font-family: $brandonBlack;
+	src: url('../../assets/fonts//brandongrotesque-black.otf');
+	font-weight:normal;
+	font-style:normal;
+}
+
+
+.content-md, .content-ios, .content-android{
+	background: transparent;
+}
+
+button {
+	width: 100%;
+
+	font-family: $brandonBlack;
+	font-size: 22px;
+	font-weight: 900;
+	text-align: center;
+	color: $white;
+	background: $green;
+	text-transform: uppercase;
+	padding: 15px;
+	border-radius: 900px;
+}

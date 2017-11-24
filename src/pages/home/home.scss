@@ -1,3 +1,45 @@
 page-home {
+	.content-md,
+	.content-ios,
+	.content-android{
+		background: url('../../assets/imgs/auth_bg.jpg') no-repeat center center / cover;
 
+	}
+	&:before{
+		content: " ";
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		display: block;
+		background: rgba(0,0,0,0.3);
+		z-index: 1;
+	}
+	.brand{
+		padding: 4em;
+		text-align: center;
+
+	}
+
+	.list-ios[inset],
+	.list-android[inset]{
+		margin-top: 100px;
+
+		.item{
+			border: none;
+			margin: 10px 0;
+		}
+
+	}
+
+	.item-label-fixed{ color: #fff;}
+
+	.item-ios,
+	.item-android{
+		background: transparent;
+		padding: 0;
+	}
+	.item-inner{
+		border-bottom: 1px solid rgba(255,255,255,0.4) !important;
+	}
+	
 }
