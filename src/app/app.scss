@@ -21,6 +21,8 @@
 $white: #ffffff;
 $redskip: #be2c2c;
 $green: #1fc52b;
+$warm-grey: #9b9b9b;
+
 $brandonBlack:"BrandonGrotesque";
 $OpenSans:"OpenSans";
 
@@ -52,7 +54,12 @@ $OpenSans:"OpenSans";
 }
 
 
-.content-md, .content-ios, .content-android{
+.content-md, .content-ios{
 	background: transparent;
 }
 @import '../assets/components/all';
+
+span.center{
+	display: block;
+	text-align: center;
+}

@@ -1,7 +1,6 @@
 page-home {
 	.content-md,
-	.content-ios,
-	.content-android{
+	.content-ios{
 		background: url('../../assets/imgs/auth_bg.jpg') no-repeat center center / cover;
 
 	}
@@ -21,7 +20,7 @@ page-home {
 	}
 
 	.list-ios[inset],
-	.list-android[inset]{
+	.list-md[inset]{
 		margin-top: 100px;
 
 		.item{
@@ -34,12 +33,12 @@ page-home {
 	.item-label-fixed{ color: #fff;}
 
 	.item-ios,
-	.item-android{
+	.item-md{
 		background: transparent;
 		padding: 0;
 	}
 	.item-inner{
 		border-bottom: 1px solid rgba(255,255,255,0.4) !important;
 	}
-	
+
 }

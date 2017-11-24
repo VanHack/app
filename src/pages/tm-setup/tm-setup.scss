@@ -1,6 +1,6 @@
 page-tm-setup {
 
-	.content.content-ios, .content.content-android{
+	.content.content-ios, .content.content-md{
 		background: #eee;
 	}
 	h1{
@@ -8,22 +8,33 @@ page-tm-setup {
 		color: $redskip;
 		text-transform: uppercase;
 		text-align: center;
+		margin-top: 5px;
 	}
 	span.welcome{
 		font-family: OpenSans;
-		font-size: 9px;
+		font-size: 1.3em;
 		font-weight: bold;
 		line-height: 1.39;
 		text-align: center;
 		color: #4a4a4a;
+		display: block;
+		margin-top: 10px;
 	}
 
 	.taste-frame{
 		height: calc(100vh - 15vh);
 		background: #fff;
 		border-radius: 10px;
-		margin: 10px;
+		margin: 20px 10px 10px;
 		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+	}
+
+	.small{
+		font-size: 1em;
+		text-align: center;
+		font-family: $OpenSans;
+		font-style: italic;
+		color: $warm-grey;
 	}
 
 }
