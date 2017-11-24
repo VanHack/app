@@ -22,23 +22,6 @@ page-tm-setup {
 			transform: rotate(-15deg);
 		}
 	}
-	h1{
-		font-family: $brandonBlack;
-		color: $redskip;
-		text-transform: uppercase;
-		text-align: center;
-		margin-top: 5px;
-	}
-	span.welcome{
-		font-family: OpenSans;
-		font-size: 1.3em;
-		font-weight: bold;
-		line-height: 1.39;
-		text-align: center;
-		color: #4a4a4a;
-		display: block;
-		margin-top: 10px;
-	}
 
 	.taste-frame{
 		height: calc(100vh - 15vh);
@@ -49,6 +32,8 @@ page-tm-setup {
 		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 		position: relative;
 
+		@extend .slide-up-fade-in;
+
 		button{
 			position: absolute;
 			bottom: 10px;
@@ -57,12 +42,58 @@ page-tm-setup {
 		}
 	}
 
+
+	span.welcome{
+		font-family: OpenSans;
+		font-size: 1.3em;
+		font-weight: bold;
+		line-height: 1.39;
+		text-align: center;
+		color: #4a4a4a;
+		display: block;
+		margin-top: 10px;
+
+		@extend .slide-up-fade-in;
+		animation-delay: 100ms;
+	}
+
+	h1{
+		font-family: $brandonBlack;
+		color: $redskip;
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 5px;
+		@extend .slide-up-fade-in;
+		animation-delay: 200ms;
+	}
+
 	.small{
 		font-size: 1em;
 		text-align: center;
 		font-family: $OpenSans;
 		font-style: italic;
 		color: $warm-grey;
+
+		@extend .slide-up-fade-in;
+		animation-delay: 300ms;
+	}
+
+	.cloud-list {
+		$total-items: 20;
+		li{
+			animation-delay: 500ms;
+			@extend .slide-up-fade-in;
+			&:first-child{
+
+			}
+		}
+
+		// Set delay per List Item
+		@for $i from 1 through $total-items {
+			li:nth-child(#{$i}) {
+				animation-delay: 700ms +.05s * $i;
+			}
+		}
 	}
 
 }
