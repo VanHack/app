@@ -13,6 +13,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { LoginComponent } from '../pages/login/login.component';
 
 const IonicPro = Pro.init('fee2cdf8', {
   appVersion: "0.0.1"
@@ -46,7 +47,8 @@ export class SkipAppErrorHandler implements ErrorHandler {
     ContactPage,
     HomePage,
 		SettingsPage,
-    TabsPage
+    TabsPage,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,8 @@ export class SkipAppErrorHandler implements ErrorHandler {
     ContactPage,
     HomePage,
 		SettingsPage,
-    TabsPage
+    TabsPage,
+    LoginComponent
   ],
   providers: [
     StatusBar,
