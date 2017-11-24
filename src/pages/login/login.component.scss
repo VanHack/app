@@ -1,0 +1,36 @@
+login-component {
+	.content-md,
+	.content-ios,
+	.content-android {
+		background: url('../../assets/imgs/auth_bg.jpg') no-repeat center center / cover;
+		&:before{
+			content: " ";
+			width: 100vw;
+			height: 100vh;
+			position: absolute;
+			display: block;
+			background: rgba(0,0,0,0.3);
+			z-index: 1;
+			top: 0;
+			left: 0;
+		}
+	}
+	.brand{
+		padding: 4em;
+		margin-top: 15vh;
+		text-align: center;
+	}
+	.list{
+		margin-top: 100px;
+		color: #fff !important;
+		.item{
+			background: transparent;
+			border: none;
+			margin: 10px 0;
+			padding: 0;
+		}
+	}
+	.item-inner {
+		border-bottom: 1px solid rgba(255,255,255,0.4) !important;
+	}
+}
