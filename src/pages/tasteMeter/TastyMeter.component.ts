@@ -3,12 +3,10 @@ import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-tm-setup',
-  templateUrl: 'tm-setup.html'
+  templateUrl: 'TasteMeter.component.html'
 })
-export class TMSetupPage {
+export class TasteMeterComponent {
 
-  constructor(public navCtrl: NavController) {
-
-  }
+  constructor(public navCtrl: NavController) { }
 
 }
