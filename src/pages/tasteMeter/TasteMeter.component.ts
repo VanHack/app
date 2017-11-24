@@ -1,12 +1,41 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, OnInit  } from '@angular/core';
+import { NavController      } from 'ionic-angular';
+
+import { ITaste       } from '../../app/taste.interface';
+import { TasteService } from '../../taste.service';
 
 @Component({
   selector: 'page-tm-setup',
   templateUrl: 'TasteMeter.component.html'
 })
-export class TasteMeterComponent {
+export class TasteMeterComponent implements OnInit {
+  private errorMessage: any;
 
-  constructor(public navCtrl: NavController) { }
+  public  tasteOptions  = [];
+  private currentPage   = 1;
+  private itemsPerPage  = 3;
+
+  constructor( private tasteService: TasteService,
+               public navCtrl: NavController ) { }
+
+  ngOnInit() {
+    this.getTastes( 6 );
+  }
+
+  setTasteOption() {
+    this.getTastes( 1 );
+  }
+
+  private getTastes( numberOfPages ) {
+    this.tasteService.getTastes( this.currentPage, numberOfPages * this.itemsPerPage )
+    .subscribe(
+      ( tastes ) => {
+        tastes.map( taste => this.tasteOptions.push( taste ) );
+      },
+      error => this.errorMessage = error );
+
+      this.currentPage += numberOfPages;
+
+  }
 
 }

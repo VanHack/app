@@ -10,50 +10,11 @@
 		<h2 class="small">Tell us about your favorite foods</h2>
 
 		<ul class="cloud-list">
-			<li>
-				<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-salad" class="hide-checkbox" value="Option 1">
-				<label for="checkbox-button-opt-salad">Salad</label>
-			</li>
-			<li>
-				<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-burger" class="hide-checkbox" value="Option 2">
-				<label for="checkbox-button-opt-burger">Burger</label>
-			</li>
-			<li>
-				<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-vegan" class="hide-checkbox" value="Option 3">
-				<label for="checkbox-button-opt-vegan">Vegan</label>
-			</li>
-
-			<li>
-				<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-pasta" class="hide-checkbox" value="Option 3">
-				<label for="checkbox-button-opt-pasta">Pasta</label>
-			</li>
-
-			<li>
-				<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-pizza" class="hide-checkbox" value="Option 3">
-				<label for="checkbox-button-opt-pizza">Pizza</label>
-			</li>
-
-			<li>
-				<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-lactose-free" class="hide-checkbox" value="Option 3">
-				<label for="checkbox-button-opt-lactose-free">Lactose-Free</label>
-			</li>
-
-			<li>
-				<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-vegetarian" class="hide-checkbox" value="Option 3">
-				<label for="checkbox-button-opt-vegetarian">Vegetarian</label>
-			</li>
-
-			<li>
-				<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-italian" class="hide-checkbox" value="Option 3">
-				<label for="checkbox-button-opt-italian">Italian</label>
-			</li>
-
-			<li>
-				<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-chinese" class="hide-checkbox" value="Option 3">
-				<label for="checkbox-button-opt-chinese">Chinese</label>
+			<li *ngFor="let taste of tasteOptions" (click)="setTasteOption()" >
+				<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-{{ taste.id }}" class="hide-checkbox" value="{{ taste.id }}">
+				<label for="checkbox-button-opt-{{ taste.id }}">{{ taste.name }}</label>
 			</li>
 		</ul>
-
 
 		<button type="button" name="button">Next</button>
 
