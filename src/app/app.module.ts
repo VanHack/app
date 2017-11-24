@@ -1,18 +1,18 @@
 import { NgModule, ErrorHandler, Injectable, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { Pro } from '@ionic/pro';
+import { StatusBar     } from '@ionic-native/status-bar';
 
-import { AppComponent } from './app.component';
-
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { TMSetupPage } from '../pages/tm-setup/tm-setup';
-import { TabsPage } from '../pages/tabs/tabs';
-
-import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Pro          } from '@ionic/pro';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+
+import { AppComponent         } from './app.component';
+import { AboutPage            } from '../pages/about/about';
+import { ContactPage          } from '../pages/contact/contact';
+import { HomePage             } from '../pages/home/home';
+import { TabsPage             } from '../pages/tabs/tabs';
+import { TasteMeterComponent  } from './../pages/tasteMeter/TasteMeter.component';
+import { LoginComponent       } from '../pages/login/login.component';
 
 const IonicPro = Pro.init('fee2cdf8', {
   appVersion: "0.0.1"
@@ -45,12 +45,13 @@ export class SkipAppErrorHandler implements ErrorHandler {
     AboutPage,
     ContactPage,
     HomePage,
-		TMSetupPage,
-    TabsPage
+    TabsPage,
+    LoginComponent,
+    TasteMeterComponent
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(AppComponent)
+    IonicModule.forRoot( AppComponent )
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -58,8 +59,9 @@ export class SkipAppErrorHandler implements ErrorHandler {
     AboutPage,
     ContactPage,
     HomePage,
-		TMSetupPage,
-    TabsPage
+    TabsPage,
+    LoginComponent,
+    TasteMeterComponent
   ],
   providers: [
     StatusBar,

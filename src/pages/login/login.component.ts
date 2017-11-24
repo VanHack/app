@@ -1,17 +1,20 @@
-import { Component } from '@angular/core';
+import { Component     } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { AppComponent } from '../../app/app.component';
+
+import { AppComponent        } from '../../app/app.component';
+import { TasteMeterComponent } from './../tasteMeter/TasteMeter.component';
 
 @Component({
   selector: 'login-component',
   templateUrl: 'login.component.html'
 })
 export class LoginComponent {
-  constructor(public navCtrl: NavController ) {
 
-  }
+  tmComponent: any = TasteMeterComponent;
+  constructor( public navCtrl: NavController ) { }
 
   login() {
-    alert('login');
+    console.log('clicked');
+    this.navCtrl = TasteMeterComponent;
   }
 }
