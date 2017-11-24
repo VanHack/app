@@ -11,7 +11,7 @@ import { AboutPage            } from '../pages/about/about';
 import { ContactPage          } from '../pages/contact/contact';
 import { HomePage             } from '../pages/home/home';
 import { TabsPage             } from '../pages/tabs/tabs';
-import { TasteMeterComponent  } from './../pages/tasteMeter/TasteMeter.component';
+import { TasteMeterComponent  } from '../pages/tasteMeter/TasteMeter.component';
 import { LoginComponent       } from '../pages/login/login.component';
 
 const IonicPro = Pro.init('fee2cdf8', {

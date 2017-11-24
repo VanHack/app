@@ -1,7 +1,6 @@
 import { Component     } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { AppComponent        } from '../../app/app.component';
 import { TasteMeterComponent } from './../tasteMeter/TasteMeter.component';
 
 @Component({
@@ -15,6 +14,6 @@ export class LoginComponent {
 
   login() {
     console.log('clicked');
-    this.navCtrl = TasteMeterComponent;
   }
+
 }
