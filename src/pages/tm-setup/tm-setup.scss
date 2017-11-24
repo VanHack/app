@@ -2,6 +2,25 @@ page-tm-setup {
 
 	.content.content-ios, .content.content-md{
 		background: #eee;
+		position: relative;
+
+		&:before{
+			content: " ";
+			display: block;
+			width: 200vw;
+			height: 80vh;
+			//background: $redskip;
+
+			background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+
+			z-index: 1;
+			position: absolute;
+			top: -50vw;
+			left: -50vw;
+			-ms-transform: rotate(-15deg); /* IE 9 */
+			-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+			transform: rotate(-15deg);
+		}
 	}
 	h1{
 		font-family: $brandonBlack;

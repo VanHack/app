@@ -6,7 +6,8 @@ button {
 	font-weight: 900;
 	text-align: center;
 	color: $white;
-	background: $green;
+	//background: $green;
+	background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
 	text-transform: uppercase;
 	padding: 15px;
 	border-radius: 900px;
