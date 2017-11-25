@@ -12,7 +12,7 @@ import { IUser                  } from './../../app/user.interface';
   templateUrl: 'login.component.html'
 })
 export class LoginComponent {
-  private userData = {};
+  private userData = { "username": null, "password": null };
   errorMessage: string;
 
   tmComponent: any = TasteMeterComponent;

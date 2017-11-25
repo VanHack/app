@@ -4,7 +4,7 @@ import { AboutPage            } from '../about/about';
 import { ContactPage          } from '../contact/contact';
 import { HomePage             } from '../home/home';
 import { TasteMeterComponent  } from '../tasteMeter/TasteMeter.component';
-import { TasteMeterSettingUpPage  } from '../tasteMeter-Setting-Up/TasteMeter-Setting-Up';
+import { TasteMeterSettingUpPage  } from '../tasteMeter-setting-up/tasteMeterSettingUp';
 
 @Component({
   templateUrl: 'tabs.html'

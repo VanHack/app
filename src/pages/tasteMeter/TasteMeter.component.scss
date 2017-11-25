@@ -24,7 +24,7 @@ page-tm-setup {
 	}
 
 	.taste-frame{
-		height: calc(100vh - 15vh);
+		height: calc(100vh - 8vh);
 		background: #fff;
 		border-radius: 30px;
 		margin: 20px 0 0;
@@ -79,9 +79,12 @@ page-tm-setup {
 		@extend .slide-up-fade-in;
 		animation-delay: 300ms;
 	}
-
 	.cloud-list {
 		$total-items: 20;
+		height: calc(100vh - 230px);
+		overflow-y: scroll;
+		border: 1px solid #9c9c9c;
+		border-radius: 3vw;
 		li{
 			animation-delay: 500ms;
 			@extend .slide-up-fade-in;

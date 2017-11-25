@@ -1,9 +1,10 @@
 import { Component, OnInit  } from '@angular/core';
 import { NavController      } from 'ionic-angular';
 
-import { ITaste       } from '../../app/taste.interface';
-import { TasteService } from '../../taste.service';
-import { TabsPage     } from './../tabs/tabs';
+import { ITaste                  } from '../../app/taste.interface';
+import { TasteService            } from '../../taste.service';
+import { TabsPage                } from './../tabs/tabs';
+import { TasteMeterSettingUpPage } from '../tasteMeter-setting-up/tasteMeterSettingUp';
 
 @Component({
   selector: 'page-tm-setup',
@@ -20,10 +21,11 @@ export class TasteMeterComponent implements OnInit {
                public navCtrl: NavController ) { }
 
   ngOnInit() {
-    this.getTastes( 6 );
+    this.getTastes( 20 );
   }
 
-  setTasteOption() {
+  setTasteOption( taste ) {
+    console.log( taste );
     this.getTastes( 1 );
   }
 
@@ -31,6 +33,7 @@ export class TasteMeterComponent implements OnInit {
     this.tasteService.getTastes( this.currentPage, numberOfPages * this.itemsPerPage )
     .subscribe(
       ( tastes ) => {
+        console.log(tastes);
         tastes.map( taste => this.tasteOptions.push( taste ) );
       },
       error => this.errorMessage = error );
@@ -40,7 +43,11 @@ export class TasteMeterComponent implements OnInit {
   }
 
   nextPage() {
-    this.navCtrl.push( TabsPage );
+    this.navCtrl.push( TasteMeterSettingUpPage );
+  }
+
+  scroll( event ) {
+    console.log( event.target.scrollTop );
   }
 
 }
