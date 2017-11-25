@@ -13,6 +13,7 @@ import { ContactPage          } from '../pages/contact/contact';
 import { HomePage             } from '../pages/home/home';
 import { TabsPage             } from '../pages/tabs/tabs';
 import { TasteMeterComponent  } from '../pages/tasteMeter/TasteMeter.component';
+import { TasteMeterSuggestionsComponent  } from '../pages/tasteMeter-Suggestions/TasteMeter-Suggestions.component';
 import { LoginComponent       } from '../pages/login/login.component';
 import { TasteService         } from '../taste.service';
 
@@ -49,7 +50,8 @@ export class SkipAppErrorHandler implements ErrorHandler {
     HomePage,
     TabsPage,
     LoginComponent,
-    TasteMeterComponent
+    TasteMeterComponent,
+		TasteMeterSuggestionsComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,8 @@ export class SkipAppErrorHandler implements ErrorHandler {
     HomePage,
     TabsPage,
     LoginComponent,
-    TasteMeterComponent
+    TasteMeterComponent,
+		TasteMeterSuggestionsComponent
   ],
   providers: [
     StatusBar,

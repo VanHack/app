@@ -1,0 +1,71 @@
+page-tasteMeter-Suggestions {
+	.content-md, .content-ios{
+		padding-top: 30px;
+	}
+
+	.content.content-ios, .content.content-md{
+		background: #eee;
+		position: relative;
+
+		&:before{
+			content: " ";
+			display: block;
+			width: 200vw;
+			height: 80vh;
+			//background: $redskip;
+
+			background-image: linear-gradient(to top, #FD6E6E 0%, #D90F77 100%);
+
+			z-index: 1;
+			position: absolute;
+			top: -50vw;
+			left: -50vw;
+			-ms-transform: rotate(-15deg); /* IE 9 */
+			-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+			transform: rotate(-15deg);
+		}
+	}
+
+
+
+
+
+	h1{
+		font-family: $brandonBlack;
+		color: $light-khaki;
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 5px;
+		font-size: 2em;
+
+		@extend .slide-up-fade-in;
+		animation-delay: 200ms;
+	}
+
+	h2{
+		@extend .page-title-masked-h2;
+		@extend .slide-up-fade-in;
+		animation-delay: 300ms;
+
+
+	}
+
+	.cloud-list {
+		$total-items: 20;
+		li{
+			animation-delay: 500ms;
+			@extend .slide-up-fade-in;
+			&:first-child{
+
+			}
+		}
+
+		// Set delay per List Item
+		@for $i from 1 through $total-items {
+			li:nth-child(#{$i}) {
+				animation-delay: 700ms +.05s * $i;
+			}
+		}
+	}
+
+}
