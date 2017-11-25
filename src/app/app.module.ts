@@ -59,11 +59,8 @@ export class SkipAppErrorHandler implements ErrorHandler {
     LoginComponent,
     TasteMeterComponent,
 		TasteMeterSettingUpPage,
-<<<<<<< HEAD
-		TasteMeterSuggestionsComponent
-=======
+		TasteMeterSuggestionsComponent,
 		RestaurantPage
->>>>>>> Restaurant-View
   ],
   imports: [
     BrowserModule,
@@ -85,11 +82,8 @@ export class SkipAppErrorHandler implements ErrorHandler {
     LoginComponent,
     TasteMeterComponent,
 		TasteMeterSettingUpPage,
-<<<<<<< HEAD
-		TasteMeterSuggestionsComponent
-=======
+		TasteMeterSuggestionsComponent,
 		RestaurantPage
->>>>>>> Restaurant-View
   ],
   providers: [
     StatusBar,

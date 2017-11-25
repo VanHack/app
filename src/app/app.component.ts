@@ -21,11 +21,7 @@ export class AppComponent {
                private storage: Storage,
                splashScreen: SplashScreen ) {
 
-<<<<<<< HEAD
     this.rootPage = this.isUserLogged() ? TabsPage : TasteMeterComponent;
-=======
-    this.rootPage = this.isUserLogged() ? TabsPage : TabsPage;
->>>>>>> Restaurant-View
 
     platform.ready().then(
       () => {
