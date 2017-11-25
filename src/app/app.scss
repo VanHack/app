@@ -22,44 +22,21 @@ $white: #ffffff;
 $redskip: #be2c2c;
 $green: #1fc52b;
 $warm-grey: #9b9b9b;
+$light-khaki: #f4e3c4;
+$black: #000000;
 
-$brandonBlack:"BrandonGrotesque";
-$OpenSans:"OpenSans";
-
-@font-face {
-	font-family: $brandonBlack;
-	src: url('../../assets/fonts/BrandonGrotesque/BrandonGrotesque-Black.otf');
-	font-weight:normal;
-	font-style:normal;
+.clean-list{
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }
-
-@font-face {
-	font-family: $OpenSans;
-	src: url('../../assets/fonts/OpenSans/OpenSans-Regular.woff');
-	font-weight:normal;
-	font-style:normal;
-}
-
-@font-face {
-	font-family: $OpenSans;
-	src: url('../../assets/fonts/OpenSans/OpenSans-Italic.woff');
-	font-weight:normal;
-	font-style:italic;
-}
-
-@font-face {
-	font-family: $OpenSans;
-	src: url('../../assets/fonts/OpenSans/OpenSans-Bold.woff');
-	font-weight:bold;
-}
-
-
-.content-md, .content-ios{
-	background: transparent;
-}
-@import '../assets/components/all';
 
 span.center{
 	display: block;
 	text-align: center;
 }
+
+.content-md, .content-ios{
+	background: transparent;
+}
+@import '../assets/components/components';

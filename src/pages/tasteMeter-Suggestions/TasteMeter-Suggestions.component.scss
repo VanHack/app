@@ -1,0 +1,73 @@
+page-tasteMeter-Suggestions {
+
+	.content.content-ios, .content.content-md{
+		background: #eee;
+		position: relative;
+
+		&:before{
+			content: " ";
+			display: block;
+			width: 200vw;
+			height: 80vh;
+			//background: $redskip;
+
+			background-image: linear-gradient(to top, #FD6E6E 0%, #D90F77 100%);
+
+			z-index: 1;
+			position: absolute;
+			top: -50vw;
+			left: -50vw;
+			-ms-transform: rotate(-15deg); /* IE 9 */
+			-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+			transform: rotate(-15deg);
+		}
+
+		.scroll-content{
+			padding: 40px !important;
+		}
+	}
+
+
+	h1.page-title{
+		font-family: $brandonBlack;
+		color: $light-khaki;
+		text-transform: uppercase;
+		text-align: center;
+		padding-top: 50px;
+		font-size: 2em;
+		margin-bottom: 15px;
+
+		@extend .slide-down-fade-in;
+		animation-delay: 200ms;
+	}
+
+	h2.page-subtitle{
+		@extend .page-title-masked-h2;
+		@extend .slide-down-fade-in;
+		animation-delay: 300ms;
+		margin-bottom: 35px;
+	}
+
+	.taste-thumbnail{
+		@extend .slide-down-fade-in;
+		animation-delay: 400ms;
+	}
+
+	.taste-product-name{
+		@extend .slide-down-fade-in;
+		animation-delay: 500ms;
+	}
+
+	.taste-product-venue{
+		@extend .slide-down-fade-in;
+		animation-delay: 600ms;
+	}
+
+	.taste-product-price{
+		@extend .slide-down-fade-in;
+		animation-delay: 700ms;
+	}
+
+
+
+}

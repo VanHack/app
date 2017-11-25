@@ -18,6 +18,7 @@ import { TasteMeterSettingUpPage } from '../pages/tasteMeter-setting-up/tasteMet
 import { LoginComponent          } from '../pages/login/login.component';
 import { TasteService            } from '../taste.service';
 import { AuthenticationService   } from '../athentication.service';
+import { TasteMeterSuggestionsComponent  } from '../pages/tasteMeter-Suggestions/TasteMeter-Suggestions.component';
 
 const IonicPro = Pro.init('fee2cdf8', {
   appVersion: "0.0.1"
@@ -53,7 +54,8 @@ export class SkipAppErrorHandler implements ErrorHandler {
     TabsPage,
     LoginComponent,
     TasteMeterComponent,
-		TasteMeterSettingUpPage
+		TasteMeterSettingUpPage,
+		TasteMeterSuggestionsComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +75,8 @@ export class SkipAppErrorHandler implements ErrorHandler {
     TabsPage,
     LoginComponent,
     TasteMeterComponent,
-		TasteMeterSettingUpPage
+		TasteMeterSettingUpPage,
+		TasteMeterSuggestionsComponent
   ],
   providers: [
     StatusBar,

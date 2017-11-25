@@ -31,6 +31,7 @@ page-tm-setup {
 		padding: 5px;
 		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 		position: relative;
+		margin-bottom: 20px;
 
 		@extend .slide-up-fade-in;
 
@@ -70,7 +71,7 @@ page-tm-setup {
 	}
 
 	.small{
-		font-size: 1em;
+		font-size: 1.2em;
 		text-align: center;
 		font-family: $OpenSans;
 		font-style: italic;
