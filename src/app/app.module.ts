@@ -8,6 +8,8 @@ import { Pro                } from '@ionic/pro';
 import { IonicStorageModule } from '@ionic/storage';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
+import { SlickModule             } from 'ngx-slick';
+
 import { AppComponent            } from './app.component';
 import { AboutPage               } from '../pages/about/about';
 import { ContactPage             } from '../pages/contact/contact';
@@ -18,6 +20,7 @@ import { TasteMeterSettingUpPage } from '../pages/tasteMeter-setting-up/tasteMet
 import { LoginComponent          } from '../pages/login/login.component';
 import { TasteService            } from '../taste.service';
 import { AuthenticationService   } from '../athentication.service';
+import { UserService             } from '../user.service';
 import { TasteMeterSuggestionsComponent  } from '../pages/tasteMeter-Suggestions/TasteMeter-Suggestions.component';
 
 const IonicPro = Pro.init('fee2cdf8', {
@@ -62,9 +65,10 @@ export class SkipAppErrorHandler implements ErrorHandler {
     HttpModule,
     IonicStorageModule.forRoot({
       name: 'skipthedishes_DB',
-         driverOrder: ['indexeddb', 'sqlite', 'websql']
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
     }),
-    IonicModule.forRoot( AppComponent )
+    IonicModule.forRoot( AppComponent ),
+    SlickModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -83,6 +87,7 @@ export class SkipAppErrorHandler implements ErrorHandler {
     SplashScreen,
     TasteService,
     AuthenticationService,
+    UserService,
     IonicErrorHandler,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]

@@ -23,17 +23,30 @@ page-tasteMeter-Suggestions {
 		}
 
 		.scroll-content{
-			padding: 40px !important;
+			overflow: hidden;
+			padding: 40px 40px 0px 40px !important;
 		}
 	}
 
+	.slick-list {
+		overflow: visible;
+	}
+
+	.slick-slide img {
+		border-radius: 7px !important;
+		height: 38vh;
+	}
+
+	.slick-current img {
+		padding: 0vh !important;
+	}
 
 	h1.page-title{
 		font-family: $brandonBlack;
 		color: $light-khaki;
 		text-transform: uppercase;
 		text-align: center;
-		padding-top: 50px;
+		padding-top: 0px;
 		font-size: 2em;
 		margin-bottom: 15px;
 
@@ -67,7 +80,5 @@ page-tasteMeter-Suggestions {
 		@extend .slide-down-fade-in;
 		animation-delay: 700ms;
 	}
-
-
 
 }

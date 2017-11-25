@@ -1,11 +1,52 @@
-import { Component } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { NavController      } from 'ionic-angular';
+
+import { IUser } from './../../app/user.interface';
 
 @Component({
   selector: 'page-tasteMeter-Suggestions',
   templateUrl: 'TasteMeter-Suggestions.component.html'
 })
-export class TasteMeterSuggestionsComponent  {
+export class TasteMeterSuggestionsComponent implements OnInit {
 
-  constructor(public navCtrl: NavController) { }
+  userData = {
+    name: "Thiago Alencar"
+  };
+
+  private errorMessage: any;
+
+  constructor( public navCtrl: NavController ) { }
+
+  slides = [
+    {img: "../../assets/imgs/sample-image-635912088.jpg"},
+    {img: "../../assets/imgs/sample-image-635912088.jpg"},
+    {img: "../../assets/imgs/sample-image-635912088.jpg"},
+    {img: "../../assets/imgs/sample-image-635912088.jpg"}
+  ];
+
+  slideConfig = {
+    infinite: true,
+    arrows: false,
+    centerMode: true,
+    speed: 300,
+    slidesToShow: 1,
+    variableWidth: true
+  };
+
+  addSlide() {
+    this.slides.push(
+      {img: "../../assets/imgs/sample-image-635912088.jpg"}
+    )
+  }
+
+  removeSlide() {
+    this.slides.length = this.slides.length - 1;
+  }
+
+  afterChange(e) {
+    console.log('afterChange');
+  }
+
+  ngOnInit(): void { }
+
 }

@@ -33,7 +33,7 @@ export class TasteMeterComponent implements OnInit {
     this.tasteService.getTastes( this.currentPage, numberOfPages * this.itemsPerPage )
     .subscribe(
       ( tastes ) => {
-        console.log(tastes);
+        console.log( "tastes" + tastes);
         tastes.map( taste => this.tasteOptions.push( taste ) );
       },
       error => this.errorMessage = error );
@@ -47,7 +47,7 @@ export class TasteMeterComponent implements OnInit {
   }
 
   scroll( event ) {
-    console.log( event.target.scrollTop );
+    console.log( "Scroll" + event.target.scrollTop );
   }
 
 }

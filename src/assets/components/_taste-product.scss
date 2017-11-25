@@ -2,22 +2,14 @@ $prefix: 'taste';
 
 
 ul.#{$prefix}-suggestions-carousel{
-margin: 20px 0;
+	margin: 20px 0;
 	@extend .clean-list;
 
 	li.#{$prefix}-item{
 
 		.#{$prefix}-thumbnail{
-
 			border-radius: 7px !important;
-			background: $warm-grey;
-			height: 300px;
-			width: 250px;
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center center;
-			margin: 0 auto 20px;
-
+			padding: 4vw;
 		}
 		.#{$prefix}-meta{
 
