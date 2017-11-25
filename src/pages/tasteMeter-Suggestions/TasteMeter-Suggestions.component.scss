@@ -33,8 +33,9 @@ page-tasteMeter-Suggestions {
 		color: $light-khaki;
 		text-transform: uppercase;
 		text-align: center;
-		margin-top: 5px;
+		padding-top: 50px;
 		font-size: 2em;
+		margin-bottom: 15px;
 
 		@extend .slide-down-fade-in;
 		animation-delay: 200ms;
@@ -44,6 +45,7 @@ page-tasteMeter-Suggestions {
 		@extend .page-title-masked-h2;
 		@extend .slide-down-fade-in;
 		animation-delay: 300ms;
+		margin-bottom: 35px;
 	}
 
 	.taste-thumbnail{
