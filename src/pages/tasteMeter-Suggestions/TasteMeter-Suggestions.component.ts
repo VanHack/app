@@ -1,22 +1,11 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController      } from 'ionic-angular';
-
-
-
 
 @Component({
   selector: 'page-tasteMeter-Suggestions',
   templateUrl: 'TasteMeter-Suggestions.component.html'
 })
-export class TasteMeterSuggestionsComponent implements OnInit {
-  private errorMessage: any;
+export class TasteMeterSuggestionsComponent  {
 
-
-  constructor(
-               public navCtrl: NavController ) { }
-
-
-
-
-
+  constructor(public navCtrl: NavController) { }
 }

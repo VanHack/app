@@ -1,3 +1,35 @@
+$brandonBlack:"BrandonGrotesque";
+$OpenSans:"OpenSans";
+
+@font-face {
+	font-family: $brandonBlack;
+	src: url('../../assets/fonts/BrandonGrotesque/BrandonGrotesque-Black.otf');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family: $OpenSans;
+	src: url('../../assets/fonts/OpenSans/OpenSans-Regular.woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family: $OpenSans;
+	src: url('../../assets/fonts/OpenSans/OpenSans-Italic.woff');
+	font-weight:normal;
+	font-style:italic;
+}
+
+@font-face {
+	font-family: $OpenSans;
+	src: url('../../assets/fonts/OpenSans/OpenSans-Bold.woff');
+	font-weight:bold;
+}
+
+
+
 .page-title-masked-h2 {
 	font-family: $brandonBlack;
 	font-size: 1.3em;
@@ -5,4 +37,32 @@
 	text-align: center;
 	color: $white;
 	text-transform: uppercase;
+}
+
+.product-title {
+
+	font-family: $brandonBlack;
+	font-size: 1.5em;
+	text-align: center;
+	color: $black;
+	display: block;
+	text-transform: uppercase;
+}
+
+.product-price {
+	font-family: $brandonBlack;
+	font-size: 2em;
+	text-align: center;
+	color: $redskip;
+	display: block;
+	text-transform: uppercase;
+}
+
+.product-venue {
+	font-family: $OpenSans;
+	font-size: 1.2em;
+	font-style: italic;
+	text-align: center;
+	display: block;
+	color: $warm-grey;
 }

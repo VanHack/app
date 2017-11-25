@@ -1,0 +1,34 @@
+$prefix: 'taste';
+
+
+ul.#{$prefix}-suggestions-carousel{
+margin: 20px 0;
+	@extend .clean-list;
+
+	li.#{$prefix}-item{
+
+		.#{$prefix}-thumbnail{
+
+			border-radius: 7px !important;
+			background: $warm-grey;
+			min-height: 50vh;
+			width: 80vw;
+			margin-bottom: 30px;
+
+		}
+		.#{$prefix}-meta{
+
+			.#{$prefix}-product-name{
+				@extend .product-title;
+			}
+			.#{$prefix}-venue{
+				@extend .product-venue;
+			}
+			.#{$prefix}-price{
+				@extend .product-price;
+			}
+		}
+
+	}
+
+}

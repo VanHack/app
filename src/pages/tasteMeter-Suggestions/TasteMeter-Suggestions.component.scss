@@ -1,7 +1,4 @@
 page-tasteMeter-Suggestions {
-	.content-md, .content-ios{
-		padding-top: 30px;
-	}
 
 	.content.content-ios, .content.content-md{
 		background: #eee;
@@ -24,13 +21,14 @@ page-tasteMeter-Suggestions {
 			-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
 			transform: rotate(-15deg);
 		}
+
+		.scroll-content{
+			padding: 40px !important;
+		}
 	}
 
 
-
-
-
-	h1{
+	h1.page-title{
 		font-family: $brandonBlack;
 		color: $light-khaki;
 		text-transform: uppercase;
@@ -42,30 +40,12 @@ page-tasteMeter-Suggestions {
 		animation-delay: 200ms;
 	}
 
-	h2{
+	h2.page-subtitle{
 		@extend .page-title-masked-h2;
 		@extend .slide-up-fade-in;
 		animation-delay: 300ms;
-
-
 	}
 
-	.cloud-list {
-		$total-items: 20;
-		li{
-			animation-delay: 500ms;
-			@extend .slide-up-fade-in;
-			&:first-child{
 
-			}
-		}
-
-		// Set delay per List Item
-		@for $i from 1 through $total-items {
-			li:nth-child(#{$i}) {
-				animation-delay: 700ms +.05s * $i;
-			}
-		}
-	}
 
 }
