@@ -1,3 +1,4 @@
+import { TasteMeterComponent } from './../pages/tasteMeter/TasteMeter.component';
 import { Component          } from '@angular/core';
 
 import { Platform           } from 'ionic-angular';
@@ -20,7 +21,7 @@ export class AppComponent {
                private storage: Storage,
                splashScreen: SplashScreen ) {
 
-    this.rootPage = this.isUserLogged() ? TabsPage : TasteMeterSuggestionsComponent;
+    this.rootPage = this.isUserLogged() ? TabsPage : TasteMeterComponent;
 
     platform.ready().then(
       () => {

@@ -17,6 +17,9 @@ export class TasteMeterComponent implements OnInit {
   private currentPage   = 1;
   private itemsPerPage  = 3;
 
+  private selectedOptions: ITaste[] = [];
+  private minimumOptionQuantity = 5;
+
   constructor( private tasteService: TasteService,
                public navCtrl: NavController ) { }
 
@@ -25,7 +28,8 @@ export class TasteMeterComponent implements OnInit {
   }
 
   setTasteOption( taste ) {
-    console.log( taste );
+    this.selectedOptions.push( taste );
+    console.log(this.selectedOptions);
     this.getTastes( 1 );
   }
 
@@ -44,10 +48,6 @@ export class TasteMeterComponent implements OnInit {
 
   nextPage() {
     this.navCtrl.push( TasteMeterSettingUpPage );
-  }
-
-  scroll( event ) {
-    console.log( "Scroll" + event.target.scrollTop );
   }
 
 }

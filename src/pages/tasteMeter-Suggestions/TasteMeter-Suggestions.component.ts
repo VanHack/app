@@ -27,6 +27,7 @@ export class TasteMeterSuggestionsComponent implements OnInit {
   slideConfig = {
     infinite: true,
     arrows: false,
+    initialSlide: 3,
     centerMode: true,
     speed: 300,
     slidesToShow: 1,
@@ -34,6 +35,7 @@ export class TasteMeterSuggestionsComponent implements OnInit {
   };
 
   addSlide() {
+    console.log( 'Slide added' );
     this.slides.push(
       {img: "../../assets/imgs/sample-image-635912088.jpg"}
     )
@@ -47,6 +49,8 @@ export class TasteMeterSuggestionsComponent implements OnInit {
     console.log('afterChange');
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.addSlide();
+  }
 
 }
