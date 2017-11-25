@@ -8,19 +8,21 @@ import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 
-import { ITaste } from './app/taste.interface';
+import { IUser } from './app/user.interface';
 
 @Injectable()
-export class TasteService {
+export class AuthenticationService {
 
     private response: any;
     private urlBase: string = 'http://192.168.0.4:3000';
 
     constructor( private http: Http ) { }
 
-    public getTastes( page: number, quantity: number ): Observable<ITaste[]> {
-        let url: string = `${ this.urlBase }/tastes?_page=${ page }&_limit=${ quantity }`;
+    public authenticate( userData ): Observable<IUser[]> {
+        let url: string = `${ this.urlBase }/users/1`;
 
+        // This method will not do a real authentication of the user
+        // with the userData to save time in this Hackathon.
         return this.http.get( url )
             .map( this.extractData )
             .catch( this.handleError );
