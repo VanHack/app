@@ -3,6 +3,7 @@ import { NavController      } from 'ionic-angular';
 
 import { ITaste       } from '../../app/taste.interface';
 import { TasteService } from '../../taste.service';
+import { TabsPage     } from './../tabs/tabs';
 
 @Component({
   selector: 'page-tm-setup',
@@ -36,6 +37,10 @@ export class TasteMeterComponent implements OnInit {
 
       this.currentPage += numberOfPages;
 
+  }
+
+  nextPage() {
+    this.navCtrl.push( TabsPage );
   }
 
 }

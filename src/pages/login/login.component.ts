@@ -6,7 +6,6 @@ import { Storage                } from '@ionic/storage';
 import { TasteMeterComponent    } from './../tasteMeter/TasteMeter.component';
 import { AuthenticationService  } from '../../athentication.service';
 import { IUser                  } from './../../app/user.interface';
-import { TabsPage               } from '../tabs/tabs';
 
 @Component({
   selector: 'login-component',
@@ -36,7 +35,7 @@ export class LoginComponent {
               this.storage.set( 'lastName',user["lastName"] );
               this.storage.set( 'email',   user["email"] );
               this.storage.set( 'session', user["session"] );
-              this.navCtrl.push( TabsPage )
+              this.navCtrl.push( TasteMeterComponent )
             };
           },
           error => this.errorMessage = error );
