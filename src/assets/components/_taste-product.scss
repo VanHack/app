@@ -11,9 +11,12 @@ margin: 20px 0;
 
 			border-radius: 7px !important;
 			background: $warm-grey;
-			min-height: 50vh;
-			width: 80vw;
-			margin-bottom: 30px;
+			height: 300px;
+			width: 250px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			margin: 0 auto 30px;
 
 		}
 		.#{$prefix}-meta{
@@ -21,10 +24,10 @@ margin: 20px 0;
 			.#{$prefix}-product-name{
 				@extend .product-title;
 			}
-			.#{$prefix}-venue{
+			.#{$prefix}-product-venue{
 				@extend .product-venue;
 			}
-			.#{$prefix}-price{
+			.#{$prefix}-product-price{
 				@extend .product-price;
 			}
 		}
