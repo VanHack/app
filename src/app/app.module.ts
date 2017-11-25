@@ -17,6 +17,7 @@ import { HomePage                } from '../pages/home/home';
 import { TabsPage                } from '../pages/tabs/tabs';
 import { TasteMeterComponent     } from '../pages/tasteMeter/TasteMeter.component';
 import { TasteMeterSettingUpPage } from '../pages/tasteMeter-setting-up/tasteMeterSettingUp';
+import { RestaurantPage          } from '../pages/RestaurantPage/RestaurantPage';
 import { LoginComponent          } from '../pages/login/login.component';
 import { TasteService            } from '../taste.service';
 import { AuthenticationService   } from '../athentication.service';
@@ -58,7 +59,11 @@ export class SkipAppErrorHandler implements ErrorHandler {
     LoginComponent,
     TasteMeterComponent,
 		TasteMeterSettingUpPage,
+<<<<<<< HEAD
 		TasteMeterSuggestionsComponent
+=======
+		RestaurantPage
+>>>>>>> Restaurant-View
   ],
   imports: [
     BrowserModule,
@@ -80,7 +85,11 @@ export class SkipAppErrorHandler implements ErrorHandler {
     LoginComponent,
     TasteMeterComponent,
 		TasteMeterSettingUpPage,
+<<<<<<< HEAD
 		TasteMeterSuggestionsComponent
+=======
+		RestaurantPage
+>>>>>>> Restaurant-View
   ],
   providers: [
     StatusBar,

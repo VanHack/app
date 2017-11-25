@@ -1,0 +1,130 @@
+page-RestaurantPage {
+
+
+	.content.content-ios, .content.content-md{
+		background: $white;
+		position: relative;
+	}
+
+	.toolbar-background-ios, .toolbar-background-md{
+		background: none !important;
+		position: relative;
+
+	}
+
+	.restaurant-cover{
+		height: 225px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		position: relative;
+		margin-top: -20px;
+		display: flex;
+
+		&:before{
+			content: "";
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			z-index: 1;
+			opacity: 0.74;
+			top: 0;
+			left: 0;
+			background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000);
+		}
+
+	}
+
+	.restaurant-meta{
+		z-index: 2;
+		position: relative;
+		padding-top: 40px;
+		overflow: hidden;
+		display: block;
+
+		.restaurant-logo{
+			max-width: 70px;
+			max-width: 70px;
+			margin-bottom: 20px;
+		}
+
+		h1{
+			font-family: $brandonBlack;
+			font-size: 1.5em;
+			color: $white;
+			text-transform: uppercase;
+			margin: 0;
+		}
+		.restaurant-address{
+			color: $white;
+			font-family: $OpenSans;
+			font-size: 0.9em;
+		}
+	}
+
+
+	ion-list {
+		.list-header-ios, .list-header-md{
+			border: none;
+		}
+
+		.item-ios, .item-md,
+		.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block,
+		.list-md > .item-block:last-child, .list-md > .item-wrapper:last-child .item-block{
+			border: none !important;
+		}
+
+		ion-item{
+			ion-label{
+				display: flex;
+			}
+
+			.product-thumbnail-wrapper{
+				width: 70px;
+				img.product-thumbnail{
+					border-radius: 5px !important;
+				}
+			}
+			.product-meta{
+				padding: 0 20px;
+				width: calc(100% - 140px);
+				.product-name{
+					font-family: $brandonBlack;
+					text-transform: uppercase;
+					font-size: 1.2em;
+				}
+				.product-description{
+					white-space: normal;
+				}
+				.product-price{
+					font-family: $brandonBlack;
+					text-transform: uppercase;
+					font-size: 1.2em;
+					color: $redskip;
+				}
+			}
+			.product-actions{
+				width: 70px;
+				text-align: right;
+				display: flex;
+				align-items: center;
+
+				ion-icon{
+					margin: 1px 0px !important;
+					&.add-cart{ color: $green;}
+					&.remove-cart{ color: $redskip;}
+				}
+				.product-qty{
+					padding: 0 3px;
+					width: 30px;
+					text-align: center;
+				}
+
+
+			}
+		}
+	}
+
+
+}
