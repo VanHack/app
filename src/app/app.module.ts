@@ -8,6 +8,7 @@ import { Pro                } from '@ionic/pro';
 import { IonicStorageModule } from '@ionic/storage';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
+<<<<<<< HEAD
 import { AppComponent          } from './app.component';
 import { AboutPage             } from '../pages/about/about';
 import { ContactPage           } from '../pages/contact/contact';
@@ -17,6 +18,17 @@ import { TasteMeterComponent   } from '../pages/tasteMeter/TasteMeter.component'
 import { LoginComponent        } from '../pages/login/login.component';
 import { TasteService          } from '../taste.service';
 import { AuthenticationService } from '../athentication.service';
+=======
+import { AppComponent         } from './app.component';
+import { AboutPage            } from '../pages/about/about';
+import { ContactPage          } from '../pages/contact/contact';
+import { HomePage             } from '../pages/home/home';
+import { TabsPage             } from '../pages/tabs/tabs';
+import { TasteMeterComponent  } from '../pages/tasteMeter/TasteMeter.component';
+import { TasteMeterSettingUpPage  } from '../pages/tasteMeter-Setting-Up/TasteMeter-Setting-Up';
+import { LoginComponent       } from '../pages/login/login.component';
+import { TasteService         } from '../taste.service';
+>>>>>>> TasteMeter-Setting-Up
 
 const IonicPro = Pro.init('fee2cdf8', {
   appVersion: "0.0.1"
@@ -51,7 +63,8 @@ export class SkipAppErrorHandler implements ErrorHandler {
     HomePage,
     TabsPage,
     LoginComponent,
-    TasteMeterComponent
+    TasteMeterComponent,
+		TasteMeterSettingUpPage
   ],
   imports: [
     BrowserModule,
@@ -70,7 +83,8 @@ export class SkipAppErrorHandler implements ErrorHandler {
     HomePage,
     TabsPage,
     LoginComponent,
-    TasteMeterComponent
+    TasteMeterComponent,
+		TasteMeterSettingUpPage
   ],
   providers: [
     StatusBar,
