@@ -14,13 +14,12 @@ import { RestaurantPage  									} from '../RestaurantPage/RestaurantPage';
 })
 export class TabsPage {
 
-  tab10Root = LoginComponent;
-	tab1Root = HomePage;
+	tab1Root = TasteMeterSuggestionsComponent;
   tab2Root = AboutPage;
   tab3Root = ContactPage;
 	tab4Root = TasteMeterComponent;
 	tab5Root = TasteMeterSettingUpPage;
-	tab6Root = TasteMeterSuggestionsComponent;
+	tab6Root = HomePage;
 	tab7Root = RestaurantPage;
 
 

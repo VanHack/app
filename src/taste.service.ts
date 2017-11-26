@@ -14,7 +14,7 @@ import { ITaste } from './app/taste.interface';
 export class TasteService {
 
     private response: any;
-    private urlBase: string = 'http://192.168.1.37:3000';
+    private urlBase: string = 'http://192.168.0.4:3000';
 
     constructor( private http: Http ) { }
 
