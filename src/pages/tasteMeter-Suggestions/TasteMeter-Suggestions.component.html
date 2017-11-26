@@ -6,23 +6,30 @@
 
 	<h2 class="page-subtitle">This is our suggestions for you based on your taste</h2>
 
-	<ul class="taste-suggestions-carousel">
+	<div class="taste-suggestions-carousel">
 
-		<li class="taste-item">
-			<ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
-				<div ngxSlickItem *ngFor="let slide of slides" class="slide">
-						<img src="{{ slide.img }}" class="taste-thumbnail" >
+		<ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
+			<div ngxSlickItem *ngFor="let slide of slides" class="slide">
+				<img src="{{ slide.img }}" class="taste-thumbnail" >
 
-						<div class="taste-meta">
-							<h2 class="taste-product-name">Green Salad</h2>
-							<span class="taste-product-venue">The Vegan Squad</span>
-							<span class="taste-product-price">$14.90</span>
-						</div>
+				<div class="taste-meta">
+					<h2 class="taste-product-name">{{ slide.name }}</h2>
+					<span class="taste-product-venue">The Vegan Squad</span>
+					<span class="taste-product-price">$14.90</span>
 				</div>
-			</ngx-slick>
 
-		</li>
+				<div class="taste-actions">
 
-	</ul>
+					<img src="../../assets/imgs/thumbs-down.svg" alt="" class="icon thumbs-down">
+
+					<img src="../../assets/imgs/thumbs-up.svg" alt="" class="icon thumbs-up">
+
+
+
+				</div>
+			</div>
+		</ngx-slick>
+
+	</div>
 
 </ion-content>

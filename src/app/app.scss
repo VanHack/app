@@ -61,5 +61,25 @@ span.center{
 		left: 0;
 		@extend .slide-down-fade-in;
 		animation-delay: 0ms;
-	}	
+	}
+}
+
+.ion-page.show-page .tabs{
+	.scroll-content{
+		overflow: hidden;
+		padding: 100px 20px 0px 20px !important;
+		margin-bottom: 0 !important;
+	}
+	.show-tabbar{
+		background: none;
+		top: 0;
+		padding-top: 20px;
+		bottom: inherit !important;
+
+		a{
+			color: $white;
+			ion-icon{color: $white;}
+			.tab-button-text{display: none;}
+		}
+	}
 }

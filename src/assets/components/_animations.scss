@@ -167,6 +167,83 @@
 }
 
 
+
+
+
+.fade-in{
+	animation: fade-in ease 1s;
+	animation-iteration-count: 1;
+
+	animation-fill-mode:forwards; /*when the spec is finished*/
+	-webkit-animation: fade-in ease 1s;
+	-webkit-animation-iteration-count: 1;
+
+	-webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+	-moz-animation: fade-in ease 1s;
+	-moz-animation-iteration-count: 1;
+
+	-moz-animation-fill-mode:forwards; /*FF 5+*/
+	-o-animation: fade-in ease 1s;
+	-o-animation-iteration-count: 1;
+
+	-o-animation-fill-mode:forwards; /*Not implemented yet*/
+	-ms-animation: fade-in ease 1s;
+	-ms-animation-iteration-count: 1;
+
+	-ms-animation-fill-mode:forwards; /*IE 10+*/
+
+	opacity:0;
+	opacity: 1\9;
+
+}
+
+
+@keyframes fade-in{
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@-moz-keyframes fade-in{
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@-webkit-keyframes fade-in {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@-o-keyframes fade-in {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@-ms-keyframes fade-in {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;	
+	}
+}
+
+
 .loader{
 	position: relative;
 	display: flex;
