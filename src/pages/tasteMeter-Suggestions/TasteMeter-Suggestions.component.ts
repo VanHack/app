@@ -10,7 +10,7 @@ import { IUser } from './../../app/user.interface';
 export class TasteMeterSuggestionsComponent implements OnInit {
 
   userData = {
-    name: "Thiago Alencar"
+    name: "John"
   };
 
   private errorMessage: any;
