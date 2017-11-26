@@ -1,8 +1,8 @@
 .taste-frame{
-	height: calc(100vh - 10vh);
+	height: calc(100vh - 100px);
 	background: #fff;
 	border-radius: 30px;
-	margin: 20px 0 0;
+
 	padding: 0 5px;
 	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 	position: relative;
@@ -42,7 +42,7 @@
 }
 .dish-list {
 	$total-items: 200;
-	height: 350px;
+	height: calc(100vh - 360px);
 	overflow-y: scroll;
 	border-radius: 3vw;
 	padding: 30px 0;
