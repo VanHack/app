@@ -15,13 +15,24 @@ import { ENV   } from './config/env.dev';
 export class AuthenticationService {
 
     public env = {
-        action   : null,
-        provider : null,
-        urlBase  : "",
-        headers  : new Headers()
+        action  : null,
+        provider: null,
+        urlBase : ''
     };
 
-    constructor( private http: Http ) { }
+    constructor( private http: Http ) {
+        this.setEnviroment();
+    }
+
+    public authenticate( userData ): Observable<IUser[]> {
+        let url: string = `${ this.env.urlBase }/1`;
+
+        // This method will not do a real authentication of the user
+        // with the userData to save time in this Hackathon.
+        return this.http.get( url )
+        .map( this.extractData )
+        .catch( this.handleError );
+    }
 
     private setEnviroment() {
         this.env.action   = ENV.services.actions.authentication;
@@ -29,16 +40,6 @@ export class AuthenticationService {
         this.env.urlBase  = this.env.provider.url + this.env.action.action;
     }
 
-    public authenticate( userData ): Observable<IUser[]> {
-        this.setEnviroment();
-        let url: string = `${ this.env.urlBase }/1`;
-
-        // This method will not do a real authentication of the user
-        // with the userData to save time in this Hackathon.
-        return this.http.get( url )
-            .map( this.extractData )
-            .catch( this.handleError );
-    }
 
     private extractData( response: Response ) {
         let body = response.json();
