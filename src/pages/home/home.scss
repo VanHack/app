@@ -37,9 +37,16 @@ page-home {
 				font-size: 2em;
 				color: $black !important;
 				font-weight: bold;
-			}
 
-		
+				.text-input::-webkit-input-placeholder{
+					color: $black !important;
+				}
+
+				.text-input:focus::-webkit-input-placeholder{
+					color: $warm-grey !important;
+				}
+
+			}
 
 		}
 
