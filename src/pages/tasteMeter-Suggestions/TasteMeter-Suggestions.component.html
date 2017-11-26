@@ -11,7 +11,7 @@
 		<li class="taste-item">
 			<ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
 				<div ngxSlickItem *ngFor="let slide of slides" class="slide">
-						<img src="{{ suggestion.img }}" class="taste-thumbnail" >
+						<img src="{{ slide.img }}" class="taste-thumbnail" >
 
 						<div class="taste-meta">
 							<h2 class="taste-product-name">Green Salad</h2>

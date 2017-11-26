@@ -17,7 +17,7 @@ export class TasteMeterSuggestionsComponent implements OnInit {
 
   constructor( public navCtrl: NavController ) { }
 
-  suggestion = [
+  slides = [
     {img: "https://source.unsplash.com/750x900/?salad"},
     {img: "https://source.unsplash.com/750x900/?burger"},
     {img: "https://source.unsplash.com/750x900/?pasta"},
@@ -30,19 +30,19 @@ export class TasteMeterSuggestionsComponent implements OnInit {
     initialSlide: 3,
     centerMode: true,
     speed: 300,
-    suggestionToShow: 1,
+    slidesToShow: 1,
     variableWidth: true
   };
 
   addSlide() {
     console.log( 'Slide added' );
-    this.suggestion.push(
+    this.slides.push(
       {img: "https://source.unsplash.com/750x900/?food"}
     )
   }
 
   removeSlide() {
-    this.suggestion.length = this.suggestion.length - 1;
+    this.slides.length = this.slides.length - 1;
   }
 
   afterChange(e) {
