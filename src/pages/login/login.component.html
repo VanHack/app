@@ -1,31 +1,51 @@
 <!-- <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+<ion-navbar>
+<ion-title>Home</ion-title>
+</ion-navbar>
 </ion-header> -->
 
 <ion-content padding>
-
+	<div class="background"></div>
 	<div class="brand">
-    <img src="../../assets/imgs/skipLogo.svg" alt="" />
-  </div>
+		<img src="../../assets/imgs/skipLogo.svg" alt="" />
+	</div>
 
-  <ion-list inset>
+	<ion-list inset class="material-forms">
 
-    <ion-item>
-      <ion-label fixed>Username</ion-label>
-      <ion-input type="text" value="skip@skip.com" [(ngModel)]="userData.username" ></ion-input>
-    </ion-item>
+		<ion-item>
+			<ion-icon name="contact" item-start></ion-icon>
+			<ion-label fixed>Username</ion-label>
+			<ion-input type="text" value="skip@skip.com" [(ngModel)]="userData.username" ></ion-input>
+		</ion-item>
 
-    <ion-item>
-      <ion-label fixed>Password</ion-label>
-      <ion-input type="password" value="9zYHxGEd8bgqx6BukhYdVKD" [(ngModel)]="userData.password"></ion-input>
-    </ion-item>
+		<ion-item>
+			<ion-icon name="key" item-start></ion-icon>
+			<ion-label fixed>Password</ion-label>
+			<ion-input type="password" value="9zYHxGEd8bgqx6BukhYdVKD" [(ngModel)]="userData.password"></ion-input>
+		</ion-item>
 
-  </ion-list>
+	</ion-list>
 
-  <div padding>
-    <button block (click)="submitLogin()">Login</button>
-  </div>
+	<div padding>
+		<button block (click)="submitLogin()">Login
+
+			<div class="loader hidden" >
+				<svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+				<path fill="#fff" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+					<animateTransform attributeType="xml"
+					attributeName="transform"
+					type="rotate"
+					from="0 25 25"
+					to="360 25 25"
+					dur="0.6s"
+					repeatCount="indefinite"/>
+				</path>
+			</svg>
+		</div>
+	</button>
+
+
+</div>
 
 </ion-content>
