@@ -13,15 +13,13 @@ import { RestaurantPage  									} from '../RestaurantPage/RestaurantPage';
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-
-	tab1Root = TasteMeterSuggestionsComponent;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
-	tab4Root = TasteMeterComponent;
-	tab5Root = TasteMeterSettingUpPage;
-	tab6Root = HomePage;
+	tab1Root = HomePage;
+	tab2Root = TasteMeterSuggestionsComponent;
+  tab3Root = AboutPage;
+  tab4Root = ContactPage;
+	tab5Root = TasteMeterComponent;
+	tab6Root = TasteMeterSettingUpPage;
 	tab7Root = RestaurantPage;
-
 
   constructor() {
 

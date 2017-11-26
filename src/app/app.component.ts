@@ -23,8 +23,8 @@ export class AppComponent {
                private storage: Storage,
                splashScreen: SplashScreen ) {
 
-    this.rootPage = this.isUserLogged() ? TabsPage : LoginComponent;
-		//this.rootPage = this.isUserLogged() ? TabsPage : TabsPage;
+    //this.rootPage = this.isUserLogged() ? TabsPage : LoginComponent;
+		this.rootPage = this.isUserLogged() ? TabsPage : TabsPage;
 
     platform.ready().then(
       () => {
