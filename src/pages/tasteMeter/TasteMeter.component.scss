@@ -29,5 +29,21 @@ page-tasteMeter-setup {
 		animation-delay: 500ms;
 	}
 
+	.loader {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+
+		svg {
+			width: 14vh;
+			height: 14vh;
+
+			path {
+				fill: #a8a8a8;
+			}
+		}
+	}
 
 }
