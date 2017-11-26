@@ -1,0 +1,47 @@
+.taste-modal-wrapper{
+
+	position: fixed;
+	background: rgba($black, 0.2);
+	width: 100vw;
+	height: 100vh;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	padding: 20px;
+	z-index: 999;
+	display: block;
+	&.hidden{
+		display: none !important;
+	}
+}
+.taste-modal{
+	width: 90vw;
+	//height: 80%;
+	border-radius: 9px;
+	background: $white;
+
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	max-height: 90vh;
+	padding: 20px;
+	z-index: 999999;
+
+
+
+
+	&.taste-modal-full{
+		height: 90vh;
+	}
+
+	$prefix:"taste";
+	.#{$prefix}-modal-close{
+		background: $redskip;
+		width: 50px;
+		height: 50px;
+		color: $white;
+	}
+
+}
