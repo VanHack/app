@@ -31,6 +31,25 @@ $black: #000000;
 	list-style: none;
 }
 
+.tag{
+	background:$green;
+	text-decoration: none;
+	padding: 2px 5px;
+	margin: 0 5px;
+	border-radius: 3px;
+	color: $white;
+
+}
+
+.loader{
+	display: block;
+	margin: 0;
+	height: inherit;
+	content: url("../../assets/imgs/loader.svg");
+	width: 60px;
+	height: 60px;
+}
+
 span.center{
 	display: block;
 	text-align: center;
@@ -64,22 +83,24 @@ span.center{
 	}
 }
 
-.ion-page.show-page .tabs{
+ion-content[padding]{
 	.scroll-content{
 		overflow: hidden;
 		padding: 80px 20px 0px 20px !important;
+		padding: 0;
 		margin-bottom: 0 !important;
 	}
-	.show-tabbar{
-		background: none;
-		top: 0;
-		padding-top: 20px;
-		bottom: inherit !important;
 
-		a{
-			color: $white;
-			ion-icon{color: $white;}
-			.tab-button-text{display: none;}
-		}
+}
+.ion-page.show-page .show-tabbar{
+	background: none;
+	top: 0;
+	padding-top: 20px;
+	bottom: inherit !important;
+
+	a{
+		color: $white;
+		ion-icon{color: $white;}
+		.tab-button-text{display: none;}
 	}
 }

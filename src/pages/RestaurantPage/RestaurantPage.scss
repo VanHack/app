@@ -4,7 +4,13 @@ page-RestaurantPage {
 	.content.content-ios, .content.content-md{
 		background: $white;
 		position: relative;
+
+
+
 	}
+
+
+
 
 	.toolbar-background-ios, .toolbar-background-md{
 		background: none !important;
@@ -13,13 +19,14 @@ page-RestaurantPage {
 	}
 
 	.restaurant-cover{
-		height: 225px;
+		height: 275px;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
 		position: relative;
 		margin-top: -20px;
 		display: flex;
+		padding-top: 70px !important;
 
 		&:before{
 			content: "";
@@ -36,37 +43,55 @@ page-RestaurantPage {
 
 	}
 
-	.restaurant-meta{
+	.restaurant-information-wrapper{
 		z-index: 2;
 		position: relative;
 		padding-top: 40px;
 		overflow: hidden;
-		display: block;
+		display: flex;
+		align-items: flex-end;
+
 
 		.restaurant-logo{
-			max-width: 70px;
-			max-width: 70px;
+			max-width: 70px !important;
+			max-width: 70px !important;
 			margin-bottom: 20px;
+			margin-right: 20px;
 		}
 
-		h1{
-			font-family: $brandonBlack;
-			font-size: 1.5em;
+		.restaurant-meta{
 			color: $white;
-			text-transform: uppercase;
-			margin: 0;
+
+
+
+			h1{
+				font-family: $brandonBlack;
+				font-size: 1.5em;
+				color: $white;
+				text-transform: uppercase;
+				margin: 0;
+			}
+
+			.icon.pin{
+				font-size: 1.6em;
+			}
+
+			.restaurant-address{
+				color: $white;
+				font-family: $OpenSans;
+				font-size: 0.9em;
+
+			}
 		}
-		.restaurant-address{
-			color: $white;
-			font-family: $OpenSans;
-			font-size: 0.9em;
-		}
+
 	}
 
 
 	ion-list {
 		.list-header-ios, .list-header-md{
 			border: none;
+			font-size: 1em;
+			padding-top: 10px;
 		}
 
 		.item-ios, .item-md,
@@ -78,6 +103,7 @@ page-RestaurantPage {
 		ion-item{
 			ion-label{
 				display: flex;
+
 			}
 
 			.product-thumbnail-wrapper{
@@ -102,6 +128,7 @@ page-RestaurantPage {
 					text-transform: uppercase;
 					font-size: 1.2em;
 					color: $redskip;
+					text-align: left;
 				}
 			}
 			.product-actions{
@@ -126,5 +153,12 @@ page-RestaurantPage {
 		}
 	}
 
+	.ion-page.show-page .tabs{
+		.scroll-content{
+			overflow: hidden;
+			padding: 0 !important;
 
+		}
+
+	}
 }

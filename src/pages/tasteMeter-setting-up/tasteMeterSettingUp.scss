@@ -53,6 +53,13 @@ page-TasteMeter-Setting-Up {
 			line-height: 1.3em;
 			text-align: center;
 		}
+		.loader{
+			display: block;
+			margin: 0;
+			height: inherit;
+			content: url("../../assets/imgs/loader.svg");
+			margin: 0 auto 30px;
+		}
 	}
 
 
