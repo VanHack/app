@@ -5,20 +5,22 @@
 </ion-header> -->
 
 <ion-content padding>
-
+<div class="background"></div>
 	<div class="brand">
     <img src="../../assets/imgs/skipLogo.svg" alt="" />
   </div>
 
-  <ion-list inset>
+  <ion-list inset class="material-forms">
 
     <ion-item>
-      <ion-label fixed>Username</ion-label>
+      <ion-icon name="contact" item-start></ion-icon>
+			<ion-label fixed>Username</ion-label>
       <ion-input type="text" value="skip@skip.com" [(ngModel)]="userData.username" ></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label fixed>Password</ion-label>
+      <ion-icon name="key" item-start></ion-icon>
+			<ion-label fixed>Password</ion-label>
       <ion-input type="password" value="9zYHxGEd8bgqx6BukhYdVKD" [(ngModel)]="userData.password"></ion-input>
     </ion-item>
 

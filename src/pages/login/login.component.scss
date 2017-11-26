@@ -2,18 +2,37 @@ login-component {
 	.content-md,
 	.content-ios,
 	.content-android {
-		background: url('../../assets/imgs/auth_bg.jpg') no-repeat center center / cover;
-		&:before{
-			content: " ";
+
+
+		.background{
+			background: url('../../assets/imgs/auth_bg.jpg') no-repeat center center / cover;
+
+			position: fixed;
 			width: 100vw;
 			height: 100vh;
-			position: absolute;
-			display: block;
-			background: rgba(0,0,0,0.3);
-			z-index: 1;
-			top: 0;
 			left: 0;
+			top:0;
+			z-index: -1;
+			$blurRatio: 5px;
+			-webkit-filter: blur($blurRatio);
+			-moz-filter: blur($blurRatio);
+			-o-filter: blur($blurRatio);
+			-ms-filter: blur($blurRatio);
+			filter: blur($blurRatio);
+
+			&:before{
+				content: " ";
+				width: 100vw;
+				height: 100vh;
+				position: absolute;
+				display: block;
+				background: rgba(0,0,0,0.4);
+				z-index: 1;
+				top: 0;
+				left: 0;
+			}
 		}
+
 	}
 	.brand{
 		padding: 4em;
@@ -26,12 +45,11 @@ login-component {
 		.item{
 			background: transparent;
 			border: none;
-			margin: 10px 0;
+			margin: 0px 0 20px;
 			padding: 0;
+			border-bottom: 1px solid rgba(255,255,255,0.4) !important;
 		}
 	}
 	.item-label-fixed{ color: #fff;}
-	.item-inner {
-		border-bottom: 1px solid rgba(255,255,255,0.4) !important;
-	}
+
 }

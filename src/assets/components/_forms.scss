@@ -1,0 +1,58 @@
+.material-forms{
+
+
+
+	// Animation
+	$mf-transition-speed: 0.28s !default;
+
+
+	.input-wrapper {
+		position: relative;
+		padding: 35px 0 10px ;
+		display: block;
+		//background: rgba($warm-grey,0.4);
+	}
+
+	ion-label[fixed]{
+		flex: initial;
+		width: auto;
+		min-width: inherit;
+		max-width: inherit;
+		margin: 0;
+		top: 35px;
+		font-size: 1.2em;
+		font-family: $brandonBlack;
+		text-transform: uppercase;
+		position: absolute;
+		color: $white;
+		transition: all $mf-transition-speed ease;
+
+	}
+
+	ion-input input:focus,
+	ion-item.input-has-focus,
+	ion-item.input-has-value{
+		ion-label[fixed]{
+			//font-size: $mf-active-font-size;
+			font-size: 1.1em !important;
+			position: absolute;
+			top: 0px;
+			left: 0;
+			color: rgba($white,0.7)!important;
+		}
+	}
+
+	ion-input {
+		height: (1.2em * 1.9);
+	}
+	ion-icon{
+		margin-top: 20px !important;
+	}
+
+	.text-input{
+		padding: 0 !important;
+		margin: 0 !important;
+		width: 100% !important;
+		font-size: 1.3em
+	}
+}
