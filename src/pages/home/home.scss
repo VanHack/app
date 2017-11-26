@@ -7,7 +7,7 @@ page-home {
 	.content-md,
 	.content-ios{
 
-		@extend .page-frame;
+		
 		&:before{
 			height: 75px;
 			clip-path: none;
