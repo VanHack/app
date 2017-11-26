@@ -2,16 +2,21 @@
 
 <ion-content padding>
 	<div class="taste-frame">
-		<span class="welcome">Welcome!</span>
-		<h1>TasteMeter</h1>
-		<h2 class="small">Tell us about your favorite foods</h2>
 
-		<ul class="cloud-list" >
-			<li *ngFor="let taste of tasteOptions" >
-				<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-{{ taste.id }}" class="hide-checkbox" value="{{ taste.id }}">
-				<label for="checkbox-button-opt-{{ taste.id }}" (click)="setTasteOption( taste )" >{{ taste.name }}</label>
-			</li>
-		</ul>
+		<h1><img src="../../assets/imgs/dish-meter-logo.svg" alt="" class="dish-meter-logo"></h1>
+		<h2 class="info-label">Tell us about your favorite foods</h2>
+
+		<div class="dish-wrapper">
+			<ul class="dish-list" >
+				<li *ngFor="let taste of tasteOptions" >
+					<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-{{ taste.id }}" class="hide-checkbox" value="{{ taste.id }}">
+					<label for="checkbox-button-opt-{{ taste.id }}" (click)="setTasteOption( taste )" >{{ taste.name }}</label>
+				</li>
+			</ul>
+		</div>
+
+
+		<p class="info-label">You must choose at least 5.</p>
 
 		<button type="button" name="button" (click)="nextPage($event)">Next</button>
 

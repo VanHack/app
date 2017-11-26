@@ -1,33 +1,14 @@
-page-tm-setup {
+page-tasteMeter-setup {
 
 	.content.content-ios, .content.content-md{
 		background: #eee;
 		position: relative;
 
-		&:before{
-			content: " ";
-			display: block;
-			width: 200vw;
-			height: 80vh;
-			//background: $redskip;
-
-			background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
-
-			z-index: 1;
-			position: absolute;
-			top: -50vw;
-			left: -50vw;
-			-ms-transform: rotate(-15deg); /* IE 9 */
-			-webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
-			transform: rotate(-15deg);
-		}
+		@extend .page-frame;
 	}
 
 	.taste-frame{
-
-
 		@extend .slide-up-fade-in;
-
 		button{
 			position: absolute;
 			bottom: 10px;
@@ -36,43 +17,17 @@ page-tm-setup {
 		}
 	}
 
-
-	span.welcome{
-		font-family: OpenSans;
-		font-size: 1.3em;
-		font-weight: bold;
-		line-height: 1.39;
-		text-align: center;
-		color: #4a4a4a;
-		display: block;
-		margin-top: 10px;
-
-		@extend .slide-up-fade-in;
-		animation-delay: 100ms;
-	}
-
 	h1{
-		font-family: $brandonBlack;
-		color: $redskip;
-		text-transform: uppercase;
-		text-align: center;
-		margin-top: 5px;
-		font-size: 2em;
-
+		margin: 5px 0 0;
 		@extend .slide-up-fade-in;
-		animation-delay: 200ms;
+		animation-delay: 400ms;
+		text-align: center;
 	}
 
-	.small{
-		font-size: 1.2em;
-		text-align: center;
-		font-family: $OpenSans;
-		font-style: italic;
-		color: $warm-grey;
-
+	.info-label{
 		@extend .slide-up-fade-in;
-		animation-delay: 300ms;
+		animation-delay: 500ms;
 	}
-	
+
 
 }
