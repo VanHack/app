@@ -37,7 +37,7 @@ export class TasteMeterSuggestionsComponent implements OnInit {
   addSlide() {
     console.log( 'Slide added' );
     this.slides.push(
-      {img: "https://source.unsplash.com/750x900/?food"}
+      { img: "https://source.unsplash.com/750x900/?food" }
     )
   }
 

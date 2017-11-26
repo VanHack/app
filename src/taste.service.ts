@@ -13,7 +13,6 @@ import { ITaste } from './app/taste.interface';
 @Injectable()
 export class TasteService {
 
-    private response: any;
     private urlBase: string = 'https://developers.zomato.com/api/v2.1/cuisines?city_id=346';
 
     // curl -X GET --header "Accept: application/json" --header "user-key: f8216020db0ddcd5081730299d5336fd" "https://developers.zomato.com/api/v2.1/cuisines?city_id=346"

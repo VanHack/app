@@ -13,7 +13,6 @@ import { IUser } from './app/user.interface';
 @Injectable()
 export class AuthenticationService {
 
-    private response: any;
     private urlBase: string = 'http://192.168.0.4:3000';
 
     constructor( private http: Http ) { }
