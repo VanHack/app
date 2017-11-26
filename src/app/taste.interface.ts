@@ -1,4 +1,4 @@
 export interface ITaste {
-    id: number,
-    name: string
+    cuisine_id: number,
+    cuisine_name: string
 }

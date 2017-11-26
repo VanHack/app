@@ -1,3 +1,4 @@
+import { GeolocationService } from './../geolocation.service';
 import { TasteMeterComponent } from './../pages/tasteMeter/TasteMeter.component';
 import { Component          } from '@angular/core';
 
@@ -9,6 +10,7 @@ import { Storage            } from '@ionic/storage/dist/storage';
 import { LoginComponent     } from '../pages/login/login.component';
 import { TabsPage           } from './../pages/tabs/tabs';
 import { TasteMeterSuggestionsComponent } from '../pages/tasteMeter-Suggestions/TasteMeter-Suggestions.component';
+import { Geolocation        } from '@ionic-native/geolocation';
 
 @Component({
   templateUrl: 'app.html'

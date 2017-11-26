@@ -1,10 +1,8 @@
 import { Injectable } from "@angular/core";
-import { IonicStorageModule } from "@ionic/storage";
 
 import { IUser    } from './app/user.interface';
-import { Storage } from "@ionic/storage/dist/storage";
+import { Storage  } from "@ionic/storage/dist/storage";
 
-import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';

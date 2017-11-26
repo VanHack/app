@@ -9,8 +9,8 @@
 		<div class="dish-wrapper">
 			<ul class="dish-list" >
 				<li *ngFor="let taste of tasteOptions" >
-					<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-{{ taste.id }}" class="hide-checkbox" value="{{ taste.id }}">
-					<label for="checkbox-button-opt-{{ taste.id }}" (click)="setTasteOption( taste )" >{{ taste.name }}</label>
+					<input type="checkbox" name="checkbox-option" id="checkbox-button-opt-{{ taste.cuisine_id }}" class="hide-checkbox" value="{{ taste.cuisine_id }}">
+					<label for="checkbox-button-opt-{{ taste.cuisine_id }}" (click)="setTasteOption( taste )" >{{ taste.cuisine_name }}</label>
 				</li>
 			</ul>
 		</div>

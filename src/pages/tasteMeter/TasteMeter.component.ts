@@ -24,26 +24,22 @@ export class TasteMeterComponent implements OnInit {
                public navCtrl: NavController ) { }
 
   ngOnInit() {
-    this.getTastes( 20 );
+    this.getTastes();
   }
 
   setTasteOption( taste ) {
     this.selectedOptions.push( taste );
-    console.log(this.selectedOptions);
-    this.getTastes( 1 );
   }
 
-  private getTastes( numberOfPages ) {
-    this.tasteService.getTastes( this.currentPage, numberOfPages * this.itemsPerPage )
+  private getTastes() {
+    this.tasteService.getTastes()
     .subscribe(
       ( tastes ) => {
-        console.log( "tastes" + tastes);
-        tastes.map( taste => this.tasteOptions.push( taste ) );
+        tastes.map( ( taste ) => {
+          this.tasteOptions.push( taste['cuisine'] );
+        } );
       },
       error => this.errorMessage = error );
-
-      this.currentPage += numberOfPages;
-
   }
 
   nextPage() {

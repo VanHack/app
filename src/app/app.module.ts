@@ -1,11 +1,11 @@
 import { NgModule, ErrorHandler, Injectable, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule    } from '@angular/http';
-
 import { StatusBar          } from '@ionic-native/status-bar';
 import { SplashScreen       } from '@ionic-native/splash-screen';
 import { Pro                } from '@ionic/pro';
 import { IonicStorageModule } from '@ionic/storage';
+import { Geolocation        } from '@ionic-native/geolocation';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
 import { SlickModule             } from 'ngx-slick';
@@ -22,6 +22,7 @@ import { LoginComponent          } from '../pages/login/login.component';
 import { TasteService            } from '../taste.service';
 import { AuthenticationService   } from '../athentication.service';
 import { UserService             } from '../user.service';
+import { GeolocationService      } from './../geolocation.service';
 import { TasteMeterSuggestionsComponent  } from '../pages/tasteMeter-Suggestions/TasteMeter-Suggestions.component';
 
 const IonicPro = Pro.init('fee2cdf8', {
@@ -91,6 +92,8 @@ export class SkipAppErrorHandler implements ErrorHandler {
     TasteService,
     AuthenticationService,
     UserService,
+    Geolocation,
+    GeolocationService,
     IonicErrorHandler,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
