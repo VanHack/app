@@ -74,18 +74,19 @@ span.center{
 		//background: $redskip;
 		clip-path: polygon(0 0, 100vw 0, 100vw 70%, 0 100%);
 		background-image: linear-gradient(141deg, #fd6e6e, #d90fc7);
+		//background-image: linear-gradient(141deg, #FD6E6E, #D90F77);
 		z-index: 1;
 		position: absolute;
 		top: 0;
 		left: 0;
-		@extend .slide-down-fade-in;
+		//@extend .slide-down-fade-in;
 		animation-delay: 0ms;
 	}
 }
 
 ion-content[padding]{
 	.scroll-content{
-		overflow: hidden;
+		//overflow: hidden;
 		padding: 80px 20px 0px 20px !important;
 		padding: 0;
 		margin-bottom: 0 !important;
@@ -93,10 +94,15 @@ ion-content[padding]{
 
 }
 .ion-page.show-page .show-tabbar{
-	background: none;
+	@extend .page-frame;
 	top: 0;
 	padding-top: 20px;
 	bottom: inherit !important;
+	overflow: hidden;
+	&:before{
+
+		z-index: 0;
+	}
 
 	a{
 		color: $white;
