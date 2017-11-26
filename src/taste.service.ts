@@ -9,15 +9,20 @@ import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 
+import { UserService } from './user.service';
 import { ITaste } from './app/taste.interface';
 import { ENV }    from './config/env.dev';
-import { Header } from 'ionic-angular/components/toolbar/toolbar-header';
-import { IServiceInterface } from './app/serviceEnviroment.interface';
 
 @Injectable()
 export class TasteService {
 
-    public env: IServiceInterface;
+    public env = {
+        action   : null,
+        provider : null,
+        urlBase  : '',
+        headers  : null
+    };
+
 
     public constructor( private http: Http ) {
         this.setEnviroment();
@@ -25,8 +30,9 @@ export class TasteService {
 
     private setEnviroment() {
         this.env.action   = ENV.services.actions.tastes;
-        this.env.provider = ENV.services.providers[ this.env.action.provider ];
+        this.env.provider = ENV.services.providers[ this.env.action.provider ],
         this.env.urlBase  = this.env.provider.url + this.env.action.action;
+        this.env.headers  = new Headers();
         this.setHeaders();
     }
 
