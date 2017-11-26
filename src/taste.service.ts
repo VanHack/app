@@ -23,6 +23,7 @@ export class TasteService {
         headers  : null
     };
 
+
     public constructor( private http: Http ) {
         this.setEnviroment();
     }
