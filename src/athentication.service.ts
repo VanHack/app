@@ -9,17 +9,29 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 
 import { IUser } from './app/user.interface';
+import { ENV   } from './config/env.dev';
 
 @Injectable()
 export class AuthenticationService {
 
-    //private urlBase: string = 'http://192.168.0.4:3000'; 	//thiago
-		private urlBase: string = 'http://192.168.1.37:3000';	//hugo
+    public env = {
+        action   : null,
+        provider : null,
+        urlBase  : "",
+        headers  : new Headers()
+    };
 
     constructor( private http: Http ) { }
 
+    private setEnviroment() {
+        this.env.action   = ENV.services.actions.authentication;
+        this.env.provider = ENV.services.providers[ this.env.action.provider ];
+        this.env.urlBase  = this.env.provider.url + this.env.action.action;
+    }
+
     public authenticate( userData ): Observable<IUser[]> {
-        let url: string = `${ this.urlBase }/users/1`;
+        this.setEnviroment();
+        let url: string = `${ this.env.urlBase }/1`;
 
         // This method will not do a real authentication of the user
         // with the userData to save time in this Hackathon.
