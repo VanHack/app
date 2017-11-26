@@ -7,7 +7,7 @@ import { TabsPage                } from './../tabs/tabs';
 import { TasteMeterSettingUpPage } from '../tasteMeter-setting-up/tasteMeterSettingUp';
 
 @Component({
-  selector: 'page-tm-setup',
+  selector: 'page-tasteMeter-setup',
   templateUrl: 'TasteMeter.component.html'
 })
 export class TasteMeterComponent implements OnInit {

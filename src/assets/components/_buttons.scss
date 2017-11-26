@@ -7,8 +7,16 @@ button {
 	text-align: center;
 	color: $white;
 	//background: $green;
-	background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+	background: $warm-grey;
 	text-transform: uppercase;
 	padding: 15px;
 	border-radius: 900px;
+
+	&.success {
+		background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+	}
+
+	&.inactive{
+		background: $warm-grey;
+	}
 }
