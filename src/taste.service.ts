@@ -1,6 +1,7 @@
 import { Injectable     } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 
+
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
@@ -9,34 +10,42 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/of';
 
 import { ITaste } from './app/taste.interface';
+import { ENV }    from './config/env.dev';
+import { Header } from 'ionic-angular/components/toolbar/toolbar-header';
+import { IServiceInterface } from './app/serviceEnviroment.interface';
 
 @Injectable()
 export class TasteService {
 
-    private urlBase: string = 'https://developers.zomato.com/api/v2.1/cuisines?city_id=346';
+    public env: IServiceInterface;
 
-    // curl -X GET --header "Accept: application/json" --header "user-key: f8216020db0ddcd5081730299d5336fd" "https://developers.zomato.com/api/v2.1/cuisines?city_id=346"
-
-    constructor( private http: Http ) { }
-
-    createAuthorizationHeader(headers: Headers) {
-        headers.append('Accept',   'application/json');
-        headers.append('user-key', 'f8216020db0ddcd5081730299d5336fd');
+    public constructor( private http: Http ) {
+        this.setEnviroment();
     }
 
-    get(url) {
-        let headers = new Headers();
-        this.createAuthorizationHeader(headers);
+    private setEnviroment() {
+        this.env.action   = ENV.services.actions.tastes;
+        this.env.provider = ENV.services.providers[ this.env.action.provider ];
+        this.env.urlBase  = this.env.provider.url + this.env.action.action;
+        this.setHeaders();
+    }
+
+    private setHeaders() {
+        this.env.provider.headers.forEach(
+            ( header ) => {
+                this.env.headers.append( header.header , header.value );
+            }
+        );
+    }
+
+    public get(url) {
         return this.http.get(url, {
-            headers: headers
+            headers: this.env.headers
         });
     }
 
     public getTastes(): Observable<ITaste[]> {
-        let headers = new Headers();
-        this.createAuthorizationHeader( headers );
-
-        return this.http.get( this.urlBase, { headers: headers } )
+        return this.http.get( this.env.urlBase, { headers: this.env.headers } )
             .map( this.extractData )
             .catch( this.handleError );
     }
