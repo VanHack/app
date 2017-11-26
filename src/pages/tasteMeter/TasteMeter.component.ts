@@ -13,9 +13,8 @@ import { TasteMeterSettingUpPage } from '../tasteMeter-setting-up/tasteMeterSett
 export class TasteMeterComponent implements OnInit {
   private errorMessage: any;
 
+  public  loader        = true;
   public  tasteOptions  = [];
-  private currentPage   = 1;
-  private itemsPerPage  = 3;
 
   private selectedOptions: ITaste[] = [];
   private minimumOptionQuantity = 5;
@@ -35,11 +34,17 @@ export class TasteMeterComponent implements OnInit {
     this.tasteService.getTastes()
     .subscribe(
       ( tastes ) => {
-        tastes.map( ( taste ) => {
-          this.tasteOptions.push( taste['cuisine'] );
-        } );
+        if ( tastes.length ) {
+          this.loader = false;
+          tastes.map( ( taste ) => {
+            this.tasteOptions.push( taste['cuisine'] );
+          } );
+        };
       },
-      error => this.errorMessage = error );
+      ( error ) => {
+        this.loader = false;
+        this.errorMessage = error;
+      });
   }
 
   nextPage() {

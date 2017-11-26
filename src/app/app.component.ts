@@ -1,3 +1,4 @@
+import { LoginComponent } from './../pages/login/login.component';
 import { GeolocationService } from './../geolocation.service';
 import { TasteMeterComponent } from './../pages/tasteMeter/TasteMeter.component';
 import { Component          } from '@angular/core';
