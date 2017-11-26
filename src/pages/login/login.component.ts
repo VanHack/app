@@ -12,8 +12,10 @@ import { IUser                  } from './../../app/user.interface';
   templateUrl: 'login.component.html'
 })
 export class LoginComponent {
-  private userData = { "username": null, "password": null };
-  errorMessage: string;
+
+  private errorMessage: string;
+  private userData        = { "username": null, "password": null };
+  public  loader: boolean = false;
 
   tmComponent: any = TasteMeterComponent;
 
@@ -26,19 +28,23 @@ export class LoginComponent {
     // The user authentication was not propertly validate
     // to save time to the rest of the project
 
+    this.loader = true;
     this.authenticationService.authenticate( this.userData )
-        .subscribe(
-          ( user ) => {
+      .subscribe( ( user ) => {
             if ( user["session"] !== null ) {
               this.storage.set( 'id',      user["id"] );
               this.storage.set( 'login',   user["login"] );
               this.storage.set( 'lastName',user["lastName"] );
               this.storage.set( 'email',   user["email"] );
               this.storage.set( 'session', user["session"] );
-              this.navCtrl.push( TasteMeterComponent )
+              this.loader = false;
+              this.navCtrl.push( TasteMeterComponent );
             };
-          },
-          error => this.errorMessage = error );
+      },
+      ( error )  => {
+        this.loader = false;
+        this.errorMessage = error;
+      });
   }
 
 }

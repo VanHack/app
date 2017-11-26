@@ -49,6 +49,20 @@ login-component {
 			border-bottom: 1px solid rgba(255,255,255,0.4) !important;
 		}
 	}
-	.item-label-fixed{ color: #fff;}
+	.item-label-fixed{ color: #fff; }
+
+	.loader {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: rgba( 0, 0, 0, 0.3 );
+		height: 100vh;
+		width: 100vw;
+
+		svg {
+			width: 14vh;
+			height: 14vh;
+		}
+	}
 
 }
