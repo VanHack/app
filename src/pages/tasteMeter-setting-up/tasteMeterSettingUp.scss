@@ -24,38 +24,8 @@ page-TasteMeter-Setting-Up {
 	}
 
 	.taste-frame{
-		height: calc(100vh - 15vh);
-		background: #fff;
-		border-radius: 30px;
-		margin: 20px 0 0;
-		padding: 5px;
-		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
-		position: relative;
-
-		//@extend .slide-up-fade-in;
-
-		button{
-			position: absolute;
-			bottom: 10px;
-			left: 10px;
-			width: calc(100% - 20px);
-		}
 	}
 
-
-	span.welcome{
-		font-family: OpenSans;
-		font-size: 1.3em;
-		font-weight: bold;
-		line-height: 1.39;
-		text-align: center;
-		color: #4a4a4a;
-		display: block;
-		margin-top: 10px;
-
-		@extend .slide-up-fade-in;
-		animation-delay: 100ms;
-	}
 
 	h1{
 		font-family: $brandonBlack;

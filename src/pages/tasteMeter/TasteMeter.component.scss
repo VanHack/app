@@ -24,14 +24,7 @@ page-tm-setup {
 	}
 
 	.taste-frame{
-		height: calc(100vh - 8vh);
-		background: #fff;
-		border-radius: 30px;
-		margin: 20px 0 0;
-		padding: 5px;
-		box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
-		position: relative;
-		margin-bottom: 20px;
+
 
 		@extend .slide-up-fade-in;
 
@@ -80,26 +73,6 @@ page-tm-setup {
 		@extend .slide-up-fade-in;
 		animation-delay: 300ms;
 	}
-	.cloud-list {
-		$total-items: 20;
-		height: calc(100vh - 230px);
-		overflow-y: scroll;
-		border: 1px solid #9c9c9c;
-		border-radius: 3vw;
-		li{
-			animation-delay: 500ms;
-			@extend .slide-up-fade-in;
-			&:first-child{
-
-			}
-		}
-
-		// Set delay per List Item
-		@for $i from 1 through $total-items {
-			li:nth-child(#{$i}) {
-				animation-delay: 700ms +.05s * $i;
-			}
-		}
-	}
+	
 
 }

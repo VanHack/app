@@ -11,14 +11,16 @@
 		<li class="taste-item">
 			<ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
 				<div ngxSlickItem *ngFor="let slide of slides" class="slide">
-						<img src="{{ slide.img }}" class="taste-thumbnail" >
+						<img src="{{ suggestion.img }}" class="taste-thumbnail" >
+
+						<div class="taste-meta">
+							<h2 class="taste-product-name">Green Salad</h2>
+							<span class="taste-product-venue">The Vegan Squad</span>
+							<span class="taste-product-price">$14.90</span>
+						</div>
 				</div>
 			</ngx-slick>
-			<div class="taste-meta">
-				<h2 class="taste-product-name">Green Salad</h2>
-				<span class="taste-product-venue">The Vegan Squad</span>
-				<span class="taste-product-price">$14.90</span>
-			</div>
+
 		</li>
 
 	</ul>

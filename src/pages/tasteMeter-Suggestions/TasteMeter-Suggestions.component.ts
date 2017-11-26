@@ -17,11 +17,11 @@ export class TasteMeterSuggestionsComponent implements OnInit {
 
   constructor( public navCtrl: NavController ) { }
 
-  slides = [
-    {img: "../../assets/imgs/sample-image-635912088.jpg"},
-    {img: "../../assets/imgs/sample-image-635912088.jpg"},
-    {img: "../../assets/imgs/sample-image-635912088.jpg"},
-    {img: "../../assets/imgs/sample-image-635912088.jpg"}
+  suggestion = [
+    {img: "https://source.unsplash.com/750x900/?salad"},
+    {img: "https://source.unsplash.com/750x900/?burger"},
+    {img: "https://source.unsplash.com/750x900/?pasta"},
+    {img: "https://source.unsplash.com/750x900/?chinese,food"}
   ];
 
   slideConfig = {
@@ -30,19 +30,19 @@ export class TasteMeterSuggestionsComponent implements OnInit {
     initialSlide: 3,
     centerMode: true,
     speed: 300,
-    slidesToShow: 1,
+    suggestionToShow: 1,
     variableWidth: true
   };
 
   addSlide() {
     console.log( 'Slide added' );
-    this.slides.push(
-      {img: "../../assets/imgs/sample-image-635912088.jpg"}
+    this.suggestion.push(
+      {img: "https://source.unsplash.com/750x900/?food"}
     )
   }
 
   removeSlide() {
-    this.slides.length = this.slides.length - 1;
+    this.suggestion.length = this.suggestion.length - 1;
   }
 
   afterChange(e) {
