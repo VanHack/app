@@ -11,13 +11,7 @@ page-tasteMeter-Suggestions {
 	}
 
 	h1.page-title{
-		font-family: $brandonBlack;
-		color: $light-khaki;
-		text-transform: uppercase;
-		text-align: center;
-		padding-top: 0px;
-		font-size: 2em;
-		margin-bottom: 15px;
+		@extend .page-title;
 	}
 
 	h2.page-subtitle{
