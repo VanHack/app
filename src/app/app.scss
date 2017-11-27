@@ -73,8 +73,9 @@ span.center{
 		height: 60vh;
 		//background: $redskip;
 		clip-path: polygon(0 0, 100vw 0, 100vw 70%, 0 100%);
-		background-image: linear-gradient(141deg, #fd6e6e, #d90fc7);
-		//background-image: linear-gradient(141deg, #FD6E6E, #D90F77);
+		//background-image: linear-gradient(141deg, #fd6e6e, #d90fc7);
+		background-image: linear-gradient(141deg, #FD6E6E, #D90F77);
+
 		z-index: 1;
 		position: absolute;
 		top: 0;
