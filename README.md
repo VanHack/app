@@ -1,9 +1,12 @@
-#Vanhackathon Challenge – SkipTheDishes
+# Vanhackathon Challenge – SkipTheDishes
 
 Hi! The porpuse of this app is to help users to order online online faster.
 Any question, please send us an email thiagofalencar@gmail.com or work.hm@gmail.com
 
-##How to Install
+## Video
+https://youtu.be/rjPQHme-CZk
+
+## How to Install
 Clone the repo, then on terminal run:
 
 `npm install`
