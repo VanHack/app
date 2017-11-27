@@ -1,15 +1,18 @@
 # Vanhackathon Challenge – SkipTheDishes
 
-Hi! The porpuse of this app is to help users to order online online faster.
+Hi! The purpose of this app is to help users to order online online faster.
+
 Any question, please send us an email thiagofalencar@gmail.com or work.hm@gmail.com
 
 ## Video
 [![Alt text](https://img.youtube.com/vi/rjPQHme-CZk/0.jpg)](https://www.youtube.com/watch?v=rjPQHme-CZk)
 
 ## Screenshots
+[![Alt text](https://github.com/PowerTeamVanHackathon/app/blob/master/screenshots/screenshots.png?raw=true)](https://github.com/PowerTeamVanHackathon/app/blob/master/screenshots/screenshots.png?raw=true)
 
 ## Prototype
-https://projects.invisionapp.com//share/PSEMDOY52#/screens
+[![Alt text](https://projects.invisionapp.com//share/PSEMDOY52#/)](https://projects.invisionapp.com//share/PSEMDOY52#/)
+
 
 ## How to Install
 Clone the repo, then on terminal run:
@@ -27,10 +30,6 @@ Github – [@thiagofalencar](https://github.com/thiagofalencar)
 #### Hugo Medeiros – UI/UX Designer
 Github – [@hugomedeiros](https://github.com/hugomedeiros)
 Portfolio – [hugomedeiros.com](http://hugomedeiros.com)
-
-
-
-
 
 
 #### Pre-requisites:
