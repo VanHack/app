@@ -11,7 +11,7 @@ Any question, please send us an email thiagofalencar@gmail.com or work.hm@gmail.
 [![Alt text](https://github.com/PowerTeamVanHackathon/app/blob/master/screenshots/screenshots.png?raw=true)](https://github.com/PowerTeamVanHackathon/app/blob/master/screenshots/screenshots.png?raw=true)
 
 ## Prototype
-[![Alt text](https://projects.invisionapp.com//share/PSEMDOY52#/)](https://projects.invisionapp.com//share/PSEMDOY52#/)
+[![https://projects.invisionapp.com//share/PSEMDOY52#/](https://projects.invisionapp.com//share/PSEMDOY52#/)](https://projects.invisionapp.com//share/PSEMDOY52#/)
 
 
 ## How to Install
