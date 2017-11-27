@@ -17,7 +17,8 @@ export class AuthenticationService {
     public env = {
         action  : null,
         provider: null,
-        urlBase : ''
+        urlBase : '',
+        headers : null
     };
 
     constructor( private http: Http ) {
@@ -25,25 +26,35 @@ export class AuthenticationService {
     }
 
     public authenticate( userData ): Observable<IUser[]> {
-        let url: string = `${ this.env.urlBase }/1`;
+        let url: string = `${ this.env.urlBase }/1.json`;
+        console.log( url );
 
         // This method will not do a real authentication of the user
         // with the userData to save time in this Hackathon.
-        return this.http.get( url )
+        return this.http.get( url, { headers: this.env.headers } )
         .map( this.extractData )
         .catch( this.handleError );
+    }
+
+    private setHeaders() {
+        this.env.provider.headers.forEach(
+            ( header ) => {
+                this.env.headers.append( header.header , header.value );
+            }
+        );
     }
 
     private setEnviroment() {
         this.env.action   = ENV.services.actions.authentication;
         this.env.provider = ENV.services.providers[ this.env.action.provider ];
         this.env.urlBase  = this.env.provider.url + this.env.action.action;
+        this.env.headers  = new Headers();
+        this.setHeaders();
     }
 
 
     private extractData( response: Response ) {
         let body = response.json();
-        console.log( body );
         return body || {};
     }
 

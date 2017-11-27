@@ -15,7 +15,9 @@ export const ENV = {
 
                 'url'       : 'http://thiagofalencar.com/hackathon/api',
                 'token'     : 'f8216020db0ddcd5081730299d5336fd',
-                'headers'   : []
+                'headers'   : [
+                    { 'header' : 'Access-Control-Allow-Origin',   'value': '*' }
+                ]
             }
         },
         'actions' : {

@@ -37,7 +37,6 @@ export class LoginComponent {
           this.storage.set( 'email',   user["email"] );
           this.storage.set( 'session', user["session"] );
           this.loader = false;
-          this.navCtrl.push( TasteMeterComponent );
         };
         console.log(  'user' );
         console.log( user );
@@ -46,6 +45,7 @@ export class LoginComponent {
         this.loader = false;
         this.errorMessage = error;
       });
+      this.navCtrl.push( TasteMeterComponent );
   }
 
 }
