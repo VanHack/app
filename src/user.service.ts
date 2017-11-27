@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 
+
 import { IUser    } from './app/user.interface';
-import { Storage  } from "@ionic/storage/dist/storage";
+import { Storage  } from "@ionic/storage";
 
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
@@ -14,16 +15,12 @@ export class UserService {
 
     private userData = [];
 
-    constructor( private storage: Storage ) {
-        this.getStorageValue("id");
-        this.getStorageValue("name");
-        this.getStorageValue("login");
-        this.getStorageValue("lastName");
-        this.getStorageValue("email");
-        this.getStorageValue("session");
-    }
+    constructor( private storage: Storage ) { }
 
     public getUserData() {
+        ["id", "name", "login", "lastName", "email", "session", "taste_list" ].forEach( ( key ) => {
+            this.getStorageValue( key );
+        });
         return this.userData;
     }
 

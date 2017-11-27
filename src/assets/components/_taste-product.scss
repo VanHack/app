@@ -6,7 +6,7 @@ $prefix: 'taste';
 
 .slick-slide{
 	transform: scale(0.8); /* you need a scale here to allow it to transition in both directions */
-	transition: 0.5s all ease;
+	/* transition: 0.5s all ease; */
 	padding: 0 !important;
 	opacity: 0.7;
 
@@ -68,7 +68,6 @@ $prefix: 'taste';
 				width:60px;
 
 				&.thumbs-up{
-					
 					margin-right: -12vw;
 				}
 				&.thumbs-down{

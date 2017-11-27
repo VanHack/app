@@ -10,22 +10,18 @@
 
 		<ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
 			<div ngxSlickItem *ngFor="let slide of slides" class="slide">
+
 				<img src="{{ slide.img }}" class="taste-thumbnail" >
 
 				<div class="taste-meta">
 					<h2 class="taste-product-name">{{ slide.name }}</h2>
 					<span class="taste-product-venue">{{ slide.venue }}</span>
-					<span class="taste-product-price">${{ slide.price }}</span>
+					<span (click)="addSlide()" class="taste-product-price">${{ slide.price }}</span>
 				</div>
 
 				<div class="taste-actions">
-
 					<img src="../../assets/imgs/thumbs-down.svg" alt="" class="icon thumbs-down">
-
 					<img src="../../assets/imgs/thumbs-up.svg" alt="" class="icon thumbs-up">
-
-
-
 				</div>
 			</div>
 		</ngx-slick>

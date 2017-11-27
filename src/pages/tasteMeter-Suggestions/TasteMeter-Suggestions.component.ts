@@ -1,7 +1,9 @@
 import { Component, OnInit  } from '@angular/core';
 import { NavController      } from 'ionic-angular';
+import { SuggestionService } from './../../suggestion.service';
 
 import { IUser } from './../../app/user.interface';
+import { UserService } from '../../user.service';
 
 @Component({
   selector: 'page-tasteMeter-Suggestions',
@@ -15,7 +17,9 @@ export class TasteMeterSuggestionsComponent implements OnInit {
 
   private errorMessage: any;
 
-  constructor( public navCtrl: NavController ) { }
+  constructor( private userService: UserService,
+               private suggestionService: SuggestionService,
+               public navCtrl: NavController ) { }
 
   slides = [
     {img: "https://source.unsplash.com/750x900/?salad", name:"Green Salad", venue:"The Vegan Squad", price: "14.90"},
@@ -46,11 +50,11 @@ export class TasteMeterSuggestionsComponent implements OnInit {
   }
 
   afterChange(e) {
-    console.log('afterChange');
+    console.log( this.userService.getUserData() );
   }
 
   ngOnInit(): void {
-    this.addSlide();
+    console.log( this.suggestionService.getSuggestions() );
   }
 
 }

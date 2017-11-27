@@ -19,27 +19,28 @@ export class LoginComponent {
 
   tmComponent: any = TasteMeterComponent;
 
-  constructor(  private authenticationService: AuthenticationService,
-                public navCtrl: NavController,
-                private storage: Storage ) { }
+  constructor(  private storage: Storage,
+                private authenticationService: AuthenticationService,
+                public navCtrl: NavController ) { }
 
-  submitLogin() {
-
+  public submitLogin() {
     // The user authentication was not propertly validate
     // to save time to the rest of the project
 
     this.loader = true;
     this.authenticationService.authenticate( this.userData )
       .subscribe( ( user ) => {
-            if ( user["session"] !== null ) {
-              this.storage.set( 'id',      user["id"] );
-              this.storage.set( 'login',   user["login"] );
-              this.storage.set( 'lastName',user["lastName"] );
-              this.storage.set( 'email',   user["email"] );
-              this.storage.set( 'session', user["session"] );
-              this.loader = false;
-              this.navCtrl.push( TasteMeterComponent );
-            };
+        if ( user["session"] !== null ) {
+          this.storage.set( 'id',      user["id"] );
+          this.storage.set( 'login',   user["login"] );
+          this.storage.set( 'lastName',user["lastName"] );
+          this.storage.set( 'email',   user["email"] );
+          this.storage.set( 'session', user["session"] );
+          this.loader = false;
+          this.navCtrl.push( TasteMeterComponent );
+        };
+        console.log(  'user' );
+        console.log( user );
       },
       ( error )  => {
         this.loader = false;

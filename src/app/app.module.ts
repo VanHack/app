@@ -24,6 +24,7 @@ import { AuthenticationService   } from '../athentication.service';
 import { UserService             } from '../user.service';
 import { GeolocationService      } from './../geolocation.service';
 import { TasteMeterSuggestionsComponent  } from '../pages/tasteMeter-Suggestions/TasteMeter-Suggestions.component';
+import { SuggestionService       } from '../suggestion.service';
 
 const IonicPro = Pro.init('fee2cdf8', {
   appVersion: "0.0.1"
@@ -66,11 +67,11 @@ export class SkipAppErrorHandler implements ErrorHandler {
   imports: [
     BrowserModule,
     HttpModule,
+    IonicModule.forRoot( AppComponent ),
     IonicStorageModule.forRoot({
       name: 'skipthedishes_DB',
       driverOrder: ['indexeddb', 'sqlite', 'websql']
     }),
-    IonicModule.forRoot( AppComponent ),
     SlickModule.forRoot()
   ],
   bootstrap: [IonicApp],
@@ -89,11 +90,12 @@ export class SkipAppErrorHandler implements ErrorHandler {
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     TasteService,
     AuthenticationService,
     UserService,
-    Geolocation,
     GeolocationService,
+    SuggestionService,
     IonicErrorHandler,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]

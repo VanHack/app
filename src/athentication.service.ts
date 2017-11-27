@@ -43,6 +43,7 @@ export class AuthenticationService {
 
     private extractData( response: Response ) {
         let body = response.json();
+        console.log( body );
         return body || {};
     }
 

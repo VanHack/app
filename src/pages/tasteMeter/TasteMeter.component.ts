@@ -5,6 +5,7 @@ import { ITaste                  } from '../../app/taste.interface';
 import { TasteService            } from '../../taste.service';
 import { TabsPage                } from './../tabs/tabs';
 import { TasteMeterSettingUpPage } from '../tasteMeter-setting-up/tasteMeterSettingUp';
+import { Storage                 } from '@ionic/storage';
 
 @Component({
   selector: 'page-tasteMeter-setup',
@@ -16,10 +17,11 @@ export class TasteMeterComponent implements OnInit {
   public  loader        = true;
   public  tasteOptions  = [];
 
-  private selectedOptions: ITaste[] = [];
+  private selectedOptions = [];
   private minimumOptionQuantity = 5;
 
   constructor( private tasteService: TasteService,
+               private storage: Storage,
                public navCtrl: NavController ) { }
 
   ngOnInit() {
@@ -27,7 +29,14 @@ export class TasteMeterComponent implements OnInit {
   }
 
   setTasteOption( taste ) {
-    this.selectedOptions.push( taste );
+    var index = this.selectedOptions.indexOf( taste.cuisine_id );
+
+    if (index >= 0) {
+      this.selectedOptions.splice( index, 1 );
+    } else {
+      this.selectedOptions.push( taste.cuisine_id );
+    }
+
   }
 
   private getTastes() {
@@ -48,7 +57,10 @@ export class TasteMeterComponent implements OnInit {
   }
 
   nextPage() {
-    this.navCtrl.push( TasteMeterSettingUpPage );
+    if ( this.selectedOptions.length >= 5 ) {
+      this.storage.set( 'taste_list', this.selectedOptions.join('|') );
+      this.navCtrl.push( TasteMeterSettingUpPage );
+    }
   }
 
 }

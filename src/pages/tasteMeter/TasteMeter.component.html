@@ -32,7 +32,7 @@
 
 		<p class="info-label">You must choose at least 5.</p>
 
-		<button type="button" name="button" (click)="nextPage($event)">Next</button>
+		<button type="button" [ngClass]=" selectedOptions.length >= 5 ? 'success' : '' " name="button" (click)="nextPage($event)">Next</button>
 
 	</div>
 

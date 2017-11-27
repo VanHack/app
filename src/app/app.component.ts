@@ -9,8 +9,9 @@ import { Storage            } from '@ionic/storage/dist/storage';
 
 import { LoginComponent     } from '../pages/login/login.component';
 import { TabsPage           } from './../pages/tabs/tabs';
-import { TasteMeterSuggestionsComponent } from '../pages/tasteMeter-Suggestions/TasteMeter-Suggestions.component';
 import { Geolocation        } from '@ionic-native/geolocation';
+import { SuggestionService } from '../suggestion.service';
+import { TasteMeterSuggestionsComponent } from '../pages/tasteMeter-Suggestions/TasteMeter-Suggestions.component';
 
 @Component({
   templateUrl: 'app.html'
@@ -23,7 +24,7 @@ export class AppComponent {
                private storage: Storage,
                splashScreen: SplashScreen ) {
 
-    this.rootPage = this.isUserLogged() ? TabsPage : LoginComponent;
+    this.rootPage = this.isUserLogged() ? TabsPage : TasteMeterSuggestionsComponent;
 
     platform.ready().then(
       () => {
