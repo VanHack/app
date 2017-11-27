@@ -29,7 +29,15 @@ $OpenSans:"OpenSans";
 }
 
 
-
+.page-title{
+	font-family: $brandonBlack;
+	color: $light-khaki;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 0px;
+	font-size: 2em;
+	margin-bottom: 15px;
+}
 .page-title-masked-h2 {
 	font-family: $brandonBlack;
 	font-size: 1.3em;

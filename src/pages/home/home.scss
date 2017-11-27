@@ -8,50 +8,19 @@ page-home {
 	.content-ios{
 
 
-		&:before{
-			height: 75px;
-			clip-path: none;
-			//background: #eee;
-
-		}
+		@extend .page-frame;
 		background: $white;
 	}
 
 
-	.list-ios[search],
-	.list-md[search]{
-		// background: #662350;
-		//border-bottom: 1px solid #ddd;
-		padding: 5px 15px;
-		margin: -80px -20px;
-
-
-		.item-inner{
-			border: none !important;
-		}
-
-		.item{
-			border: none;
-
-			ion-input{
-				font-size: 2em;
-				color: $black !important;
-				font-weight: bold;
-
-				.text-input::-webkit-input-placeholder{
-					color: $black !important;
-				}
-
-				.text-input:focus::-webkit-input-placeholder{
-					color: $warm-grey !important;
-				}
-
-			}
-
-		}
+	h1{
+		@extend .page-title;
+	}
+	
+	h2{
+		@extend .page-title-masked-h2;
 
 	}
-
 
 	.list-ios[venue],
 	.list-md[venue]{

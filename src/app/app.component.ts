@@ -24,7 +24,7 @@ export class AppComponent {
                private storage: Storage,
                splashScreen: SplashScreen ) {
 
-    this.rootPage = this.isUserLogged() ? TabsPage : TasteMeterSuggestionsComponent;
+    this.rootPage = this.isUserLogged() ? TabsPage : TabsPage;
 
     platform.ready().then(
       () => {
