@@ -12,6 +12,7 @@ export const ENV = {
                 ]
             },
             'jsonserver' : {
+
                 'url'       : 'http://thiagofalencar.com/hackathon/api',
                 'token'     : 'f8216020db0ddcd5081730299d5336fd',
                 'headers'   : []
